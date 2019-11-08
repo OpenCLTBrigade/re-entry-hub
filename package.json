@@ -2,7 +2,7 @@
   "name": "re-entry-hub",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jefferycarmichael.github.io/re-entry-hub",
+  "homepage": "https:// http://opencharlotte.org/re-entry-hub/",
   "dependencies": {
     "babel": "^6.23.0",
     "bootstrap": "^4.3.1",
