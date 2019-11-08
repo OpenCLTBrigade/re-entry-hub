@@ -1,0 +1,31 @@
+
+
+
+/* Makes body full size. */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(235, 233, 226, 0);
+  }
+  html, #root, #one {
+    height: 100%;
+  }
+/* Home background image */
+  #home{
+    /* background-image: url("../../images/welcome.png"); */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat image */
+    background-size: cover; /* Resize image to cover container */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(235, 233, 226, 0);
+}
+ 
+#homebtn{
+  position: absolute;
+  bottom: 20%;
+  font-weight: 400;
+  font-size: 2rem
+}
