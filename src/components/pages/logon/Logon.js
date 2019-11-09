@@ -7,7 +7,7 @@ import { Container} from "../../grid/Container";
 const Logon = () => (
   <div>
     <NavTabs />
-    <Container>
+    <Container  addClasses= "container">
     <h1>Logon Page</h1>
     <p>
       Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula. Curabitur pellentesque

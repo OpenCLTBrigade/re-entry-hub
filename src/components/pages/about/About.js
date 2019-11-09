@@ -1,6 +1,7 @@
 import React from "react";
 import NavTabs from "../../nav/NavTabs";
 import { Row, Container, Col } from "../../grid";
+import Footer from "../footer/Footer";
 
 const About = () => (
   
@@ -21,6 +22,7 @@ const About = () => (
 </Col>
 </Row>
 </Container>
+
   </div>
 );
 

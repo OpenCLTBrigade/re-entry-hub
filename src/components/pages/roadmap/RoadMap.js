@@ -67,7 +67,7 @@ class RoadMap extends React.Component {
     return (
       <div>
         <NavTabs />
-        <Container>
+        <Container  addClasses= "container">
           <h1 className="text-center mt-3">RoadMap</h1>
           <form className="mt-4">
             <Row addClasses="row">

@@ -5,7 +5,7 @@ import employment from "../../data/employment.json";
 
 const Employ= props => (
   <div>
-    <Container>
+    <Container  addClasses= "container">
       <Row addClasses="row dflex justify-content-center mt-3">
         <Col addClasses="col-12 text-center">
           <p>

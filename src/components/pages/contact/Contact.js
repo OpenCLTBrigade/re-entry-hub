@@ -7,7 +7,7 @@ import { Container} from "../../grid/Container";
 const Contact = props => (
   <div>
      <NavTabs />
-     <Container>
+     <Container addClasses= "container">
     <h1>Contact Page</h1>
     <p>
       Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis

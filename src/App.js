@@ -10,6 +10,7 @@ import RoadMap from "./components/pages/roadmap/RoadMap";
 import Employ from "./components/pages/employment/Employ";
 import Housing from "./components/pages/housing/Housing";
 import Health from "./components/pages/health/Health";
+import Footer from "./components/pages/footer/Footer";
 
 
 
@@ -30,13 +31,15 @@ const App = () => (
           <Route exact path="/housing" component={Housing} />
           <Route exact path="/health" component={Health} />
           {/* ===================== */}
-          
+
 {/* Default changed from Notfound to Home due to compatibility issue with gh-pages.  
       Change back to deploy */}
           <Route component={Home} /> 
       </Switch>
     </div>
+    <Footer></Footer>
   </Router>
+  
 );
 
 // export default withAuthenticator(App, true);

@@ -30,7 +30,7 @@ const Housing = props => (
             </p>
             <p className="m-0">
               <strong>URL:</strong>
-              <a class="oflow" href={provider.url}> {provider.url}</a>
+              <a className="oflow" href={provider.url}> {provider.url}</a>
             </p>
             <p className="m-0"> 
               <strong>Email:</strong> {provider.email}

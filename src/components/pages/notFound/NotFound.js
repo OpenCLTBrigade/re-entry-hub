@@ -8,7 +8,7 @@ const NotFound = () => (
  <div>
   <NavTabs />
 
-  <Container fluid>
+  <Container  addClasses= "container fluid">
     <Row>
       <Col addClasses="md-12">
     <Jumbotron addClasses="jumbotron mt-4 shadow">      {/*size is used to add bootstrap classes */}
