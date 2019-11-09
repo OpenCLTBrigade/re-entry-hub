@@ -7,10 +7,10 @@ import  "./housing.scss"
 const Housing = props => (
   <div>
     <Container>
-      <Row addClasses="row dflex justify-content-center m-5">
-        <Col addClasses="col-8 text-center">
+      <Row addClasses="row dflex justify-content-center mt-3">
+        <Col addClasses="col-12 text-center">
           <p>
-            <h3>Agencies That Can Help You in Your Housing Search</h3>{" "}
+            <h4>Agencies That Can Help You in Your Housing Search</h4>{" "}
           </p>
         </Col>
       </Row>
@@ -18,24 +18,24 @@ const Housing = props => (
       <Row addClasses="row dflex justify-content-center">
         {housing.map(provider => (
           // <div>
-          <Col addClasses="col-5 m-2 p-4 border shadow text-justify">
-            <p>
+          <Col addClasses="col-12 m-1 p-3 border shadow-sm text-justify">
+            <p className="m-0">
               <strong>Name:</strong> {provider.name}
             </p>
-            <p>
+            <p className="m-0">
               <strong>Address:</strong> {provider.address}
             </p>
-            <p>
+            <p className="m-0">
               <strong>Ph:</strong> {provider.ph}{" "}
             </p>
-            <p>
+            <p className="m-0">
               <strong>URL:</strong>
               <a class="oflow" href={provider.url}> {provider.url}</a>
             </p>
-            <p>
+            <p className="m-0"> 
               <strong>Email:</strong> {provider.email}
             </p>
-            <p>
+            <p className="m-0">
               <strong>Description:</strong> {provider.description}
             </p>
             <span><strong>Registry:</strong> {provider.registry} </span>

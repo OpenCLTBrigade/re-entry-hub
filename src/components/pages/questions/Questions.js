@@ -1,10 +1,10 @@
 import React from "react";
-import { Row, Container, Col } from "../../grid";
+import { Row, Col } from "../../grid";
 
 // Generates Accordian Block for Questions.
 const Questions = ({ dataTarget, idName, children }) => (
   <Row>
-    <Col addClasses="col-10 offset-1 mb-3">
+    <Col addClasses="col-11 offset-1 mb-3">
       <div className="accordion" id="accordionExample">
         <div className="card">
           <div className="card-header" id="headingOne">

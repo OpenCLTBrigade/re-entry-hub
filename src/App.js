@@ -6,8 +6,8 @@ import About from "./components/pages/about/About";
 import Logon from "./components/pages/logon/Logon";
 import Contact from "./components/pages/contact/Contact";
 import RoadMap from "./components/pages/roadmap/RoadMap";
-import NotFound from "./components/pages/notFound/NotFound";
-import Provider from "./components/pages/provider/Provider";
+// import NotFound from "./components/pages/notFound/NotFound";
+import Employ from "./components/pages/employment/Employ";
 import Housing from "./components/pages/housing/Housing";
 import Health from "./components/pages/health/Health";
 
@@ -24,11 +24,16 @@ const App = () => (
           <Route exact path="/logon" component={Logon} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/roadmap" component={RoadMap} />
-          {/* Routes below just used to list json */}
-          <Route exact path="/provider" component={Provider} />
+
+          {/* Routes is this section just used to test json. Can be removed to deploy */}
+          <Route exact path="/employ" component={Employ} />
           <Route exact path="/housing" component={Housing} />
           <Route exact path="/health" component={Health} />
-          <Route component={Home} />
+          {/* ===================== */}
+          
+{/* Default changed from Notfound to Home due to compatibility issue with gh-pages.  
+      Change back to deploy */}
+          <Route component={Home} /> 
       </Switch>
     </div>
   </Router>

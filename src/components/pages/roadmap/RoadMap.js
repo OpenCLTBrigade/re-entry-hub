@@ -5,6 +5,9 @@ import { Row, Container, Col } from "../../grid";
 import { optionsState, optionsCounty, startState } from "../../data/data";
 import Select from "react-select";
 import { RadioGroup, Radio } from "react-radio-group";
+import Employ from "../employment/Employ";
+import Housing from "../housing/Housing";
+import Health from "../health/Health"
 var jsonQuery = require('json-query');
 
 class RoadMap extends React.Component {
@@ -157,10 +160,7 @@ class RoadMap extends React.Component {
             {this.state.housing === true ? <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
                    {/*Add'l questions appears when yes is clicked */}
                    {/* Write Questions Here */}
-            1.	Question 1<br/>
-            2.	Question 2<br/>         
-            3.	Question 3<br/>
-            4.  Question 4
+           <Housing></Housing>
             </Questions> : ""}             
 
  {/* Question 3 ============================================*/}
@@ -189,10 +189,7 @@ class RoadMap extends React.Component {
             {this.state.employment === true ? <Questions dataTarget="#collapseThree"  idName="collapseThree">
                    {/*Add'l questions appears when yes is clicked */}
                      {/* Write Questions Here */}
-            1.	Question 1<br/>
-            2.	Question 2<br/>         
-            3.	Question 3<br/>
-            4.  Question 4
+          <Employ></Employ>
             </Questions> : ""}             
 
             {/* Question 4 ============================================*/}
@@ -288,10 +285,7 @@ class RoadMap extends React.Component {
             {this.state.health === true ? <Questions dataTarget="#collapseSix"  idName="collapseSix">
                    {/*Add'l questions appears when yes is clicked */}
                    {/* Write Questions Here */}
-            1.	Question 1<br/>
-            2.	Question 2<br/>         
-            3.	Question 3<br/>
-            4.  Question 4
+           <Health></Health>
             </Questions> : ""}             
 
           </form>
