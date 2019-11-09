@@ -98,34 +98,11 @@ class RoadMap extends React.Component {
                 />
               </Col>
             </Row>
-            {/* <Row>
-            <Col addClasses="col-10 offset-1 mt-3">
-                <RadioGroup
-                  name="provider"
-                  onChange={this.handleChange}
-                >
-                <p>Are you a Service Provider?</p>
-                  <label>
-                    <Radio
-                      className="mr-1"
-                      value={{ value: true, name: "provider" }}
-                    />
-                    Yes
-                  </label>
-                  <label>
-                    <Radio
-                      className="ml-3 mr-1"
-                      value={{ value: false, name: "provider" }}
-                    />
-                    No
-                  </label>
-                </RadioGroup>
-             </Col>
-             {this.state.provider === true ? <Questions></Questions> : ""  }
-          </Row>  */}
+
+            {/* Question 1 ============================================*/}
             <Row>
               <Col addClasses="col-10 offset-1 mt-3">
-                <RadioGroup name="id" onChange={this.handleChange}>
+                <RadioGroup name="id"  onChange={this.handleChange}>
                   <p>Do you need an Id?</p>
                   <label>
                     <Radio
@@ -144,33 +121,17 @@ class RoadMap extends React.Component {
                 </RadioGroup>
               </Col>
             </Row>
-            {this.state.id === true ? <Questions></Questions> : ""}{" "}
-            {/*Add'l questions appears when ternary is true */}
-            {/* <Row>
-          <Col addClasses="col-10 offset-1 mt-0">
-                <RadioGroup
-                  name="resident"
-                  onChange={this.handleChange}
-                >
-                <p>Are you a Returning Resident?</p>
-                  <label>
-                    <Radio
-                      className="mr-1"
-                      value={{ value: true, name: "resident" }}
-                      
-                    />
-                    Yes
-                  </label>
-                  <label>
-                    <Radio
-                      className="ml-3 mr-1"
-                      value={{ value: false, name: "resident" }}
-                    />
-                    No
-                  </label>
-                </RadioGroup>
-             </Col>
-             </Row> */}
+
+            {this.state.id === true ? <Questions dataTarget="#collapseOne"  idName="collapseOne">
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}{" "}
+  
+{/* Question 2 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1">
                 <RadioGroup name="housing" onChange={this.handleChange}>
@@ -193,8 +154,16 @@ class RoadMap extends React.Component {
               </Col>
             </Row>
 
-            {this.state.housing === true ? <Questions></Questions> : ""}              {/*Add'l questions appears when ternary is true */}
+            {this.state.housing === true ? <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
+                   {/*Add'l questions appears when yes is clicked */}
+                   {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}             
 
+ {/* Question 3 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1">
                 <RadioGroup name="employment" onChange={this.handleChange}>
@@ -217,8 +186,16 @@ class RoadMap extends React.Component {
               </Col>
             </Row>
 
-            {this.state.employment === true ? <Questions></Questions> : ""}             {/*Add'l questions appears when ternary is true */}
+            {this.state.employment === true ? <Questions dataTarget="#collapseThree"  idName="collapseThree">
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}             
 
+            {/* Question 4 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1">
                 <RadioGroup name="transport" onChange={this.handleChange}>
@@ -241,8 +218,16 @@ class RoadMap extends React.Component {
               </Col>
             </Row>
             
-            {this.state.transport === true ? <Questions></Questions> : ""}             {/*Add'l questions appears when ternary is true */}
+            {this.state.transport === true ? <Questions dataTarget="#collapseFour"  idName="collapseFour">
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}             
 
+            {/* Question 5============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1">
                 <RadioGroup name="food" onChange={this.handleChange}>
@@ -265,8 +250,16 @@ class RoadMap extends React.Component {
               </Col>
             </Row>
 
-            {this.state.food === true ? <Questions></Questions> : ""}             {/*Add'l questions appears when ternary is true */}
+            {this.state.food === true ? <Questions dataTarget="#collapseFive"  idName="collapseFive">
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}             
 
+            {/* Question 6 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1">
                 <RadioGroup name="health" onChange={this.handleChange}>
@@ -292,80 +285,15 @@ class RoadMap extends React.Component {
               </Col>
             </Row>
 
-            {this.state.health === true ? <Questions></Questions> : ""}             {/*Add'l questions appears when ternary is true */}
+            {this.state.health === true ? <Questions dataTarget="#collapseSix"  idName="collapseSix">
+                   {/*Add'l questions appears when yes is clicked */}
+                   {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}             
 
-            {/* <Row>
-            <Col addClasses="col-12 offset-1">
-                <RadioGroup
-                  name="business"
-                  onChange={this.handleChange}
-                >
-                <p>Do you want to start a business?</p>
-                  <label>
-                    <Radio
-                      className="mr-1"
-                      value={{ value: true, name: "business" }}
-                    />
-                    Yes
-                  </label>
-                  <label>
-                    <Radio
-                      className="ml-3 mr-1"
-                      value={{ value: false, name: "business" }}
-                    />
-                    No
-                  </label>
-                </RadioGroup>
-            </Col>
-          </Row> */}
-            {/* <Row>
-            <Col addClasses="col-12 offset-1">
-                <RadioGroup
-                  name="finance"
-                  onChange={this.handleChange}
-                >
-              <p>Do you need financial literacy?</p>
-                  <label>
-                    <Radio
-                      className="mr-1"
-                      value={{ value: true, name: "finance" }}
-                    />
-                    Yes
-                  </label>
-                  <label>
-                    <Radio
-                      className="ml-3 mr-1"
-                      value={{ value: false, name: "finance" }}
-                    />
-                    No
-                  </label>
-                </RadioGroup>
-            </Col>
-          </Row> */}
-            {/* <Row>
-            <Col addClasses="col-10 offset-1">
-                <RadioGroup
-                  name="mentoring"
-                  onChange={this.handleChange}
-                >
-              <p>Do you need mentoring?</p>
-                  <label>
-                    <Radio
-                      className="mr-1"
-                      value={{ value: true, name: "mentor" }}
-                    />
-                    Yes
-                  </label>
-                  <label>
-                    <Radio
-                      className="ml-3 mr-1"
-                      value={{ value: false, name: "mentor" }}
-                    />
-                    No
-                  </label>
-                </RadioGroup>  
-            </Col>
-          </Row> */}
           </form>
         </Container>
       </div>

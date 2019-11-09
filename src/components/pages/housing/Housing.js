@@ -3,6 +3,7 @@ import { Container, Col, Row } from "../../grid";
 import housing from "../../data/housing.json";
 import  "./housing.scss"
 
+// Displays housing JSON
 const Housing = props => (
   <div>
     <Container>

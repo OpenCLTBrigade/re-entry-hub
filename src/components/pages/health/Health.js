@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Col, Row } from "../../grid";
 import health from "../../data/health.json";
-
+// Displays health provider JSON
+//
 const Health = props => (
   <div>
     <Container>

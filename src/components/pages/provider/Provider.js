@@ -15,7 +15,10 @@ const Provider = props => (
       </Row>
 
       <Row addClasses="row dflex justify-content-center">
-        {employment.map(provider => (
+        
+        {console.log((jsonata("**").evaluate(employment) ))}
+  
+        {/* {employment.map(provider => (
           // <div>
           <Col addClasses="col-5 m-2 p-4 border shadow">
             <p>
@@ -39,7 +42,8 @@ const Provider = props => (
             </p>
           </Col>
           // </div>
-        ))}
+        )
+        )} */}
       </Row>
     </Container>
   </div>
