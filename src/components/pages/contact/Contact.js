@@ -1,27 +1,58 @@
 import React from "react";
 import NavTabs from "../../nav/NavTabs";
-import { Container} from "../../grid/Container";
-// import { Link, Route } from "react-router-dom";
-// import Learn from "./Learn";
+import { Row, Container, Col } from "../../grid";
 
 const Contact = props => (
   <div>
-     <NavTabs />
-     <Container addClasses= "container">
-    <h1>Contact Page</h1>
-    <p>
-      Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-      molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-      magna a ultrices. Aenean pellentesque placerat lacus imperdiet efficitur.
-      In felis nisl, luctus non ante euismod, tincidunt bibendum mi. In a
-      molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna posuere,
-      eget tristique dui dapibus. Maecenas fermentum elementum faucibus. Quisque
-      nec metus vestibulum, egestas massa eu, sollicitudin ipsum. Nulla
-      facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh dictum
-      ullamcorper. Class aptent taciti sociosqu ad litora torquent per conubia
-      nostra, per inceptos himenaeos. Etiam ornare rutrum felis at rhoncus.
-      Etiam vel condimentum magna, quis tempor nulla.
-    </p>
+    <NavTabs />
+    <Container addClasses="container mt-3">
+      <h3 className="text-center">Contact us</h3>
+      <br />
+      <Row addClasses="row">
+        <Col addClasses="col-md-8">
+          <div>
+            <form action="/post" method="post">
+              <input className="form-control" name="name" placeholder="Name" />
+              <br />
+              <input
+                className="form-control"
+                name="phone"
+                placeholder="Phone"
+              />
+              <br />
+              <input
+                className="form-control"
+                name="email"
+                placeholder="E-mail"
+              />
+              <br />
+              <textarea
+                className="form-control"
+                name="text"
+                placeholder="How can we help you?"
+                style={{ height: "150px" }}
+              ></textarea>
+              <br />
+              <input className="btn btn-primary" type="submit" value="Send" />
+              <br />
+              <br />
+            </form>
+          </div>
+        </Col>
+        <Col addClasses="col-md-4">
+          <b>Address:</b>
+          <br />
+         
+         222 Main St 
+          <br />
+        Anytown NA 55001
+          <br />
+          Phone: +1 (101) 555-1012
+          <br />
+          <a href="mailto:me@mysite.com">me@mysite.com</a>
+          <br />
+        </Col>
+      </Row>
     </Container>
   </div>
 );

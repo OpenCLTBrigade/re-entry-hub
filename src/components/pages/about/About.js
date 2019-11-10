@@ -1,13 +1,13 @@
 import React from "react";
 import NavTabs from "../../nav/NavTabs";
 import { Row, Container, Col } from "../../grid";
-import Footer from "../footer/Footer";
+
 
 const About = () => (
   
   <div>
    <NavTabs />
-   <Container>
+   <Container addClasses ="container">
      <Row>
        <Col addClasses="col-12">
       <h1>About Page</h1>

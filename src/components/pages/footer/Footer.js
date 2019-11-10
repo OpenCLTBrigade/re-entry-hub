@@ -8,9 +8,9 @@ const Footer = () => (
   <Row>
     <Col  >
       <div>
-        <p className="mb-0 text-center">© 2019 All Rights Reserved.</p>
+        <p className="mb-0 pt-1 text-center">© 2019 All Rights Reserved.</p>
         <p className="mb-0">
-          Legal Disclaimer: The site DOES NOT provide any legal advice, only
+         <b> Legal Disclaimer:</b> The site DOES NOT provide any legal advice, only
           information. Users of this web site should consult with their own
           lawyer for legal advice.
         </p>
