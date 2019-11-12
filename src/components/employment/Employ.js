@@ -1,6 +1,6 @@
 
 import React from "react";
-import { Col, Row } from "../../grid";
+import { Col, Row } from "../grid";
 import "./employ.css";
 // import employment from "../../data/employment.json";
 // import jsonata from 'jsonata';

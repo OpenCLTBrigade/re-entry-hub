@@ -1,5 +1,5 @@
 import React from "react";
-import { Row, Col } from "../../grid";
+import { Row, Col } from "../grid";
 
 // Generates Accordian Block for Questions.
 const Questions = ({ dataTarget, idName, children }) => (

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Col, Row } from "../../grid";
+import { Container, Col, Row } from "../grid";
 import "./Footer.css";
 
 const Footer = () => (

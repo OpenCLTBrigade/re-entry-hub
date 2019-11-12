@@ -15,7 +15,16 @@
       "ph": "(704) 348-2560",
       "url": "https://www.salvationarmycarolinas.org/charlotte/programs/homeless-services/",
       "email": "n/a",
-      "description": " "
+      "description": " ",
+      "registry": "No",
+      "felonies": "Yes",
+      "fees": "No",
+      "rent": "No",
+      "menOnly": "No",
+      "womenOnly": "No",
+      "families": "No",
+      "employmentReq":"No"
+
     },
 
     {
@@ -25,7 +34,16 @@
       "ph": "(704) 347-0278",
       "url": "https://www.urbanministrycenter.org/",
       "email": "",
-      "description": " "
+      "description": " ",
+      "registry": "No",
+      "felonies": "Yes",
+      "fees": "No",
+      "rent": "No",
+      "menOnly": "No",
+      "womenOnly": "No",
+      "families": "No",
+      "employmentReq":"No"
+
     },
 
     {
@@ -153,7 +171,7 @@
       "registry": "No",
       "felonies": "Yes",
       "fees": "No",
-      "rent": "Np",
+      "rent": "No",
       "menOnly": "No",
       "womenOnly": "No",
       "families": "Yes",

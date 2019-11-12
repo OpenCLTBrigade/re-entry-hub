@@ -7,7 +7,7 @@ import Logon from "./components/pages/logon/Logon";
 import Contact from "./components/pages/contact/Contact";
 import RoadMap from "./components/pages/roadmap/RoadMap";
 // import NotFound from "./components/pages/notFound/NotFound";
-import Footer from "./components/pages/footer/Footer";
+import Footer from "./components/footer/Footer";
 
 const App = () => (
   <div id="head">

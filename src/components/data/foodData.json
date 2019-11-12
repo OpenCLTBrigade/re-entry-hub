@@ -1,0 +1,110 @@
+[
+    {
+        "id": 2001,
+        "name": "Matthews Help Center",
+        "address": "119 N Ames StMatthews, NC 28105",
+        "ph": "(704) 847-8383",
+        "idReq": "Yes",
+        "apptReq": "Yes",
+        "assessmentReq": "Yes",
+        "description": "By appointment only; walk-ins discouraged. Must have a photo ID (drivers license, state ID, or passport). If receiving assistance from this center for the first time, must schedule appointment with social worker for assessment prior to receiving assistance "
+      },
+
+      {
+        "id": 2002,
+        "name": "Faith Soldiers Word Ministries",
+        "address": "857 Eastway DrCharlotte, NC 28205",
+        "ph": "(704) 567-2128",
+        "idReq": "Yes",
+        "apptReq": "Yes",
+        "assessmentReq": "Yes",
+        "description": "Call to schedule appointment and discuss qualifications. Photo ID required along with proof of Mecklenburg County residency (utility or telephone bill with current address will do); those receiving food stamps are NOT eligible for this pantry; however, they will serve people who have applied for food stamps but have not yet received their cards. Household income must be verified."
+      },
+
+      {
+        "id": 2003,
+        "name": "Metropolitan Community Church",
+        "address": "7121 Orr RdCharlotte, NC 28213",
+        "ph": "(704) 563-5810",
+        "idReq": "No",
+        "apptReq": "Yes",
+        "assessmentReq": "No",
+        "description": "Call to schedule food pickup."
+      },
+
+      {
+        "id": 2004,
+        "name": "St. Paul Baptist Church Pantry",
+        "address": "1401 Allen StCharlotte, NC 28205",
+        "ph": "(704) 334-5309",
+        "idReq": "No",
+        "apptReq": "No",
+        "assessmentReq": "No",
+        "description": "First come first serve; not by appointment; will give out food as people arrive until all food has been distributed ID (do not have to have photo ID)."
+      },
+
+      {
+        "id": 2005,
+        "name": "If My People Mission Center",
+        "address": "2511 Lucena StCharlotte, NC 28206",
+        "ph": "(704) 756-5176",
+        "idReq": "Yes",
+        "apptReq": "No",
+        "assessmentReq": "Yes",
+        "description": "Must fill out application to determine eligibility; ID with address required."
+      },
+
+      {
+        "id": 2006,
+        "name": "New Outreach Christian Center",
+        "address": "3900 Gossett AveCharlotte, NC 28208",
+        "ph": "(704) 398-1777",
+        "idReq": "No",
+        "apptReq": "No",
+        "assessmentReq": "No",
+        "description": "All other services are available on a first come first served basis. No ID needed. Clothing closet is also available at this time."
+      },
+
+      
+      {
+        "id": 2007,
+        "name": "Thrift United Methodist Church",
+        "address": "8245 Moores Chapel RdCharlotte, NC 28214",
+        "ph": "(704) 392-9807",
+        "idReq": "No",
+        "apptReq": "Yes",
+        "assessmentReq": "No",
+        "description": "Call after 9:00 AM on Thursday to schedule same day appointment.  Clients must call on their own to schedule an appointment, referrals not accepted. "
+      },
+
+    {
+      "id": 2008,
+      "name": "Silver Mount Baptist Pantry",
+      "address": "501 W Arrowood RdCharlotte, NC 28217",
+      "ph": "(704) 522-1528",
+      "idReq": "Yes",
+      "apptReq": "Yes",
+      "assessmentReq": "No",
+      "description": "Clients must bring valid NC photo ID and a bill with their current address; EBT card would be acceptable; clients must be Mecklenburg residents. Can come once a month. "
+    },
+
+    {
+        "id": 2009,
+        "name": "Ministerio Integral Hispano",
+        "address": "7424 E W.T. Harris BlvdCharlotte, NC 28227",
+        "ph": "(704) 531-4060",
+        "idReq": "Yes",
+        "apptReq": "Yes",
+        "assessmentReq": "No",
+        "description": "Walk-in with Photo ID (any kind of photo ID; will accept expired IDs and can be from any country); Application required. "
+      }
+  
+
+
+
+
+
+
+
+    
+]

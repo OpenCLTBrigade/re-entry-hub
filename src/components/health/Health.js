@@ -1,5 +1,5 @@
 import React from "react";
-import {Col, Row } from "../../grid";
+import {Col, Row } from "../grid";
 import "./health.css"
 // import health from "../../data/health.json";
 // Displays health provider JSON

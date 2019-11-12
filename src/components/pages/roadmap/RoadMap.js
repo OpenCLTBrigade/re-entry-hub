@@ -1,16 +1,18 @@
 import React from "react";
 import NavTabs from "../../nav/NavTabs";
-import Questions from "../questions/Questions";
+import Questions from "../../questions/Questions";
 import { Row, Container, Col } from "../../grid";
 import { optionsState, optionsCounty, startState } from "../../data/data";
 import Select from "react-select";
 import { RadioGroup, Radio } from "react-radio-group";
-import Employ from "../employment/Employ";
-import Housing from "../housing/Housing";
-import Health from "../health/Health"
-import employData from "../../data/employData.json"
-import housingData from "../../data/housingData.json"
-import healthData from "../../data/healthData.json"
+import Employ from "../../employment/Employ";
+import Housing from "../../housing/Housing";
+import Health from "../../health/Health";
+import Food from "../../food/Food"
+import employData from "../../data/employData.json";
+import housingData from "../../data/housingData.json";
+import healthData from "../../data/healthData.json";
+import foodData from "../../data/foodData.json"
 var jsonQuery = require('json-query');
 
 class RoadMap extends React.Component {
@@ -19,7 +21,8 @@ class RoadMap extends React.Component {
     selectedCounty: "",
     employData,
     housingData,
-    healthData 
+    healthData,
+    foodData 
   };
 
   componentDidMount = () => {
@@ -80,6 +83,7 @@ class RoadMap extends React.Component {
     event.preventDefault();
     this.setState({ employData });
   };
+
 //housing section============================================
   removeHousing = (id) => {
     // Filter this.state.employData. for items with an id not equal to the id being removed
@@ -93,6 +97,7 @@ class RoadMap extends React.Component {
     event.preventDefault();
     this.setState({ housingData });
   };
+
 //health section=============================================
   removeMed = (id) => {
     // Filter this.state.employData. for items with an id not equal to the id being removed
@@ -107,6 +112,19 @@ class RoadMap extends React.Component {
     this.setState({ healthData });
   };
 
+//Food section=============================================
+  removeFood = (id) => {
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const foodData = this.state.foodData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
+    this.setState({ foodData });
+  };
+
+  resetFood = (event) => {
+    // reset employData state to original
+    event.preventDefault();
+    this.setState({ foodData });
+  };
 
 
   render() {
@@ -117,7 +135,7 @@ class RoadMap extends React.Component {
      <NavTabs />
         <Container  addClasses= "container">
           <h1 className="text-center mt-3">RoadMap</h1>
-          <form className="mt-4 pb-3">
+          <form className="mt-4 pb-4">
             <Row addClasses="row">
               <Col addClasses="col-12 offset-1 mt-4">
                 <p>Select Your State and County.</p>
@@ -328,12 +346,24 @@ class RoadMap extends React.Component {
             </Row>
 
             {this.state.food === true ? <Questions dataTarget="#collapseFive"  idName="collapseFive">
+            <h3>Agencies That Can Help You with Food</h3>{" "}
+             <button className="btn btn-primary" onClick={this.resetFood}>
+              Reset
+             </button>
+
+                  
                    {/*Add'l questions appears when yes is clicked */}
                      {/* Write Questions Here */}
-            1.	Question 1<br/>
-            2.	Question 2<br/>         
-            3.	Question 3<br/>
-            4.  Question 4
+                     { this.state.foodData.map(item =>(<Food
+                  name={item.name}
+                  address={item.address}
+                  ph= {item.ph}
+                  url= {item.url}
+                  email={item.email}
+                  description={item.description} 
+                  id ={item.id}
+                  key={item.id}
+                  removeFood={this.removeFood}></Food>))}
             </Questions> : ""}             
 
             {/* Question 6 ============================================*/}
@@ -363,7 +393,7 @@ class RoadMap extends React.Component {
             </Row>
 
             {this.state.health === true ? <Questions dataTarget="#collapseSix"  idName="collapseSix">
-            <h3>Agencies That Can Help You  Mental Health & Medical</h3>{" "}
+            <h3>Agencies That Can Help You with Mental Health & Medical</h3>{" "}
             <button className="btn btn-primary" onClick={this.resetMed}>
             Reset
           </button>

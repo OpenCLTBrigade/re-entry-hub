@@ -1,6 +1,6 @@
 import React from "react";
-import { Col, Row } from "../../grid";
-// import housing from "../../data/housing.json";
+import { Col, Row } from "../grid";
+// import housing from "../data/housing.json";
 import "./housing.css";
 
 // Displays housing JSON
