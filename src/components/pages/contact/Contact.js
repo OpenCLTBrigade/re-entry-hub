@@ -12,28 +12,28 @@ const Contact = props => (
         <Col addClasses="col-md-8">
           <div>
             <form action="/post" method="post">
-              <input className="form-control" name="name" placeholder="Name" />
+              <input className="form-control shadow-sm" name="name" placeholder="Name" />
               <br />
               <input
-                className="form-control"
+                className="form-control shadow-sm"
                 name="phone"
                 placeholder="Phone"
               />
               <br />
               <input
-                className="form-control"
+                className="form-control shadow-sm"
                 name="email"
                 placeholder="E-mail"
               />
               <br />
               <textarea
-                className="form-control"
+                className="form-control shadow-sm"
                 name="text"
                 placeholder="How can we help you?"
                 style={{ height: "150px" }}
               ></textarea>
               <br />
-              <input className="btn btn-primary" type="submit" value="Send" />
+              <input className="btn btn-primary shadow" type="submit" value="Send" />
               <br />
               <br />
             </form>

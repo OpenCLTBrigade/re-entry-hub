@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import NavTabs from "../../nav/NavTabs";
-import "./Home.scss"
+import "./Home.css"
 
 
 const Home = () => (

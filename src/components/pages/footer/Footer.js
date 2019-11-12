@@ -5,8 +5,8 @@ import "./Footer.css";
 const Footer = () => (
    <div className =" footr">
     <Container  addClasses= "container">
-  <Row>
-    <Col  >
+  <Row addClasses ="row">
+    <Col  addClasses="col-12 pb-2">
       <div>
         <p className="mb-0 pt-1 text-center">© 2019 All Rights Reserved.</p>
         <p className="mb-0">

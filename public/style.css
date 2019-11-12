@@ -3,5 +3,6 @@
     overflow: hidden;
     display: block;
     position: relative;
-    padding-bottom: 100px; /* height of your footer */
+     /* height of your footer */
+     padding-bottom: 45px;
 }
