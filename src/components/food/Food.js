@@ -20,7 +20,7 @@ const Food = props => (
               </p>
               {/* Removes info if x is clicked */}
               <span onClick={() => props.removeFood(props.id)} className="remove">
-                𝘅
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
               </span>
             </Col>
         </Row>

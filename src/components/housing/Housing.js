@@ -46,8 +46,8 @@ const Housing = props => (
             <strong>Men Only:</strong> {props.menOnly}
           </span>
              {/* Removes info if x is clicked */}
-           <span onClick={() => props.removeHousing(props.id)} className="remove">
-              𝘅
+          <span onClick={() => props.removeHousing(props.id)} className="remove">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
           </span>
 
         </Col>

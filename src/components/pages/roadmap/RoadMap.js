@@ -9,6 +9,7 @@ import Employ from "../../employment/Employ";
 import Housing from "../../housing/Housing";
 import Health from "../../health/Health";
 import Food from "../../food/Food"
+import Identify from "../../identify/Identify"
 import employData from "../../data/employData.json";
 import housingData from "../../data/housingData.json";
 import healthData from "../../data/healthData.json";
@@ -194,10 +195,7 @@ class RoadMap extends React.Component {
             {this.state.id === true ? <Questions dataTarget="#collapseOne"  idName="collapseOne">
                    {/*Add'l questions appears when yes is clicked */}
                      {/* Write Questions Here */}
-            1.	Question 1<br/>
-            2.	Question 2<br/>         
-            3.	Question 3<br/>
-            4.  Question 4
+           <Identify></Identify>
             </Questions> : ""}{" "}
   
 {/* Question 2 ============================================*/}
@@ -225,8 +223,8 @@ class RoadMap extends React.Component {
 
             {this.state.housing === true ? <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
             <h4>Agencies That Can Help You in Your Housing Search</h4>{" "}
-            <button className="btn btn-primary btn-sm" onClick={this.resetHousing}>
-            Reset
+            <button className="btn btn-primary btn-sm mb-2" onClick={this.resetHousing}>
+            Reset 
           </button>
 
                    {/*Add'l questions appears when yes is clicked */}
@@ -269,7 +267,7 @@ class RoadMap extends React.Component {
             {this.state.employment === true ? <Questions dataTarget="#collapseThree"  idName="collapseThree">
       
             <h3>Agencies That Can Help You in Your Job Search</h3>{" "}
-            <button className="btn btn-primary" onClick={this.reset}>
+            <button className="btn btn-primary mb-2" onClick={this.reset}>
             Reset
           </button>
 
@@ -347,7 +345,7 @@ class RoadMap extends React.Component {
 
             {this.state.food === true ? <Questions dataTarget="#collapseFive"  idName="collapseFive">
             <h3>Agencies That Can Help You with Food</h3>{" "}
-             <button className="btn btn-primary" onClick={this.resetFood}>
+             <button className="btn btn-primary mb-2" onClick={this.resetFood}>
               Reset
              </button>
 
@@ -394,7 +392,7 @@ class RoadMap extends React.Component {
 
             {this.state.health === true ? <Questions dataTarget="#collapseSix"  idName="collapseSix">
             <h3>Agencies That Can Help You with Mental Health & Medical</h3>{" "}
-            <button className="btn btn-primary" onClick={this.resetMed}>
+            <button className="btn btn-primary mb-2" onClick={this.resetMed}>
             Reset
           </button>
 

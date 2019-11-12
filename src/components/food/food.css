@@ -1,0 +1,13 @@
+.remove .fa-trash-o {
+    color: #ff1744;
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .remove .fa-trash-o:hover {
+    color: #d50000;
+  }
+  
