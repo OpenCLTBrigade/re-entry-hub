@@ -1,0 +1,19 @@
+.oflow {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+   
+  }
+  
+  .remove {
+    color: #ff1744;
+    font-size: 40px;
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    cursor: pointer;
+  }
+  
+  .remove:hover {
+    color: #d50000;
+  }

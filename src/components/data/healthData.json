@@ -1,5 +1,6 @@
 [
   {
+    "id": 1001,
     "name": "Monarch",
     "address": "1210 North Tryon Street Charlotte, NC 28206",
     "ph": "(866) 272-7826",
@@ -8,6 +9,7 @@
     "description": "Services include outpatient Therapy and Psychiatric Services (children and adults), Intensive In-Home Services (ages 3-20) Peer Services (adults only)"
   },
   {
+    "id": 1002,
     "name": "Anuvia",
     "address": "100 Billingsley RdCharlotte, NC 28211",
     "ph": "(704) 376-7447",
@@ -17,6 +19,7 @@
   },
 
   {
+    "id": 1003,
     "name": "CMC Behavior Health Centers Assertive Community Treatment Team 1",
     "address": "439 Billingsley Rd Charlotte, NC 28211",
     "ph": "(704) 432-0234",
@@ -26,6 +29,7 @@
   },
 
   {
+    "id": 1004,
     "name": "McLeod Addictive Disease Center, INC.",
     "address": "515 Clanton Rd, Charlotte, NC 28217",
     "ph": "(704) 332-9001",
@@ -35,6 +39,7 @@
   },
 
   {
+    "id": 1005,
     "name": "New Beginnings",
     "address": "1508 Cleveland Avenue Charlotte, N.C. 28203",
     "ph": "(704) 334-6574",
@@ -44,6 +49,7 @@
   },
 
   {
+    "id": 1006,
     "name": "PCP/Sail",
     "address": "5601 Executive Drive Center, Charlotte, N.C. 28212",
     "ph": "(704) 561-0920",

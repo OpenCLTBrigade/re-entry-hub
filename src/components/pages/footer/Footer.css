@@ -1,4 +1,7 @@
 .footr{
     font-size: 10px;
     background-color: rgba(246, 246, 246, 0.849);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

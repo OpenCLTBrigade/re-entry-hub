@@ -7,17 +7,11 @@ import Logon from "./components/pages/logon/Logon";
 import Contact from "./components/pages/contact/Contact";
 import RoadMap from "./components/pages/roadmap/RoadMap";
 // import NotFound from "./components/pages/notFound/NotFound";
-import Employ from "./components/pages/employment/Employ";
-import Housing from "./components/pages/housing/Housing";
-import Health from "./components/pages/health/Health";
 import Footer from "./components/pages/footer/Footer";
 
-
-
-
 const App = () => (
+  <div id="head">
   <Router>
-
     <div id="one">
       <Switch>
           <Route exact path="/" component={Home} />
@@ -25,13 +19,6 @@ const App = () => (
           <Route exact path="/logon" component={Logon} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/roadmap" component={RoadMap} />
-
-          {/* Routes is this section just used to test json. Can be removed to deploy */}
-          <Route exact path="/employ" component={Employ} />
-          <Route exact path="/housing" component={Housing} />
-          <Route exact path="/health" component={Health} />
-          {/* ===================== */}
-
 {/* Default changed from Notfound to Home due to compatibility issue with gh-pages.  
       Change back to deploy */}
           <Route component={Home} /> 
@@ -39,7 +26,8 @@ const App = () => (
     </div>
     <Footer></Footer>
   </Router>
-  
+
+  </div>
 );
 
 // export default withAuthenticator(App, true);

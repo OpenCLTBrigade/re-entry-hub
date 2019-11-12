@@ -8,12 +8,18 @@ import { RadioGroup, Radio } from "react-radio-group";
 import Employ from "../employment/Employ";
 import Housing from "../housing/Housing";
 import Health from "../health/Health"
+import employData from "../../data/employData.json"
+import housingData from "../../data/housingData.json"
+import healthData from "../../data/healthData.json"
 var jsonQuery = require('json-query');
 
 class RoadMap extends React.Component {
   state = {
     selectedState: "",
-    selectedCounty: ""
+    selectedCounty: "",
+    employData,
+    housingData,
+    healthData 
   };
 
   componentDidMount = () => {
@@ -25,6 +31,8 @@ class RoadMap extends React.Component {
       this.setState({
         [name]: value
       });
+  
+      
     });
     console.log(this.state);
   };
@@ -54,19 +62,59 @@ class RoadMap extends React.Component {
 
   var result=  jsonQuery('NC[value=49].label', {
       data: optionsCounty
-    });
-
-
+    })
     // console.log(this.state);
     console.log(result);
   };
+
+  // employment section=======================================
+  remove = (id) => {
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const employData = this.state.employData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
+    this.setState({ employData });
+  };
+
+  reset = (event) => {
+    // reset employData state to original
+    event.preventDefault();
+    this.setState({ employData });
+  };
+//housing section============================================
+  removeHousing = (id) => {
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const housingData = this.state.housingData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
+    this.setState({ housingData });
+  };
+
+  resetHousing = (event) => {
+    // reset employData state to original
+    event.preventDefault();
+    this.setState({ housingData });
+  };
+//health section=============================================
+  removeMed = (id) => {
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const healthData = this.state.healthData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
+    this.setState({ healthData });
+  };
+
+  resetMed = (event) => {
+    // reset employData state to original
+    event.preventDefault();
+    this.setState({ healthData });
+  };
+
+
 
   render() {
     const { value } = this.state.selectedState;
     // console.log(value)
     return (
       <div>
-        <NavTabs />
+     <NavTabs />
         <Container  addClasses= "container">
           <h1 className="text-center mt-3">RoadMap</h1>
           <form className="mt-4">
@@ -158,9 +206,23 @@ class RoadMap extends React.Component {
             </Row>
 
             {this.state.housing === true ? <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
+            <h4>Agencies That Can Help You in Your Housing Search</h4>{" "}
+            <button className="btn btn-primary btn-sm" onClick={this.resetHousing}>
+            Reset
+          </button>
+
                    {/*Add'l questions appears when yes is clicked */}
                    {/* Write Questions Here */}
-           <Housing></Housing>
+                { this.state.housingData.map(home =>(<Housing
+                  name={home.name}
+                  address={home.address}
+                  ph= {home.ph}
+                  url= {home.url}
+                  email={home.email}
+                  description={home.description} 
+                  id ={home.id}
+                  key={home.id}
+                  removeHousing={this.removeHousing}></Housing>))}
             </Questions> : ""}             
 
  {/* Question 3 ============================================*/}
@@ -187,9 +249,27 @@ class RoadMap extends React.Component {
             </Row>
 
             {this.state.employment === true ? <Questions dataTarget="#collapseThree"  idName="collapseThree">
+      
+            <h3>Agencies That Can Help You in Your Job Search</h3>{" "}
+            <button className="btn btn-primary" onClick={this.reset}>
+            Reset
+          </button>
+
+
                    {/*Add'l questions appears when yes is clicked */}
                      {/* Write Questions Here */}
-          <Employ></Employ>
+         { this.state.employData.map(agency =>(<Employ
+                id ={agency.id}
+                key={agency.id}
+                name={agency.name}
+                address={agency.address}
+                ph= {agency.ph}
+                url= {agency.url}
+                email={agency.email}
+                description={agency.description}
+                remove={this.remove}
+
+                ></Employ>))}
             </Questions> : ""}             
 
             {/* Question 4 ============================================*/}
@@ -283,9 +363,24 @@ class RoadMap extends React.Component {
             </Row>
 
             {this.state.health === true ? <Questions dataTarget="#collapseSix"  idName="collapseSix">
+            <h3>Agencies That Can Help You  Mental Health & Medical</h3>{" "}
+            <button className="btn btn-primary" onClick={this.resetMed}>
+            Reset
+          </button>
+
                    {/*Add'l questions appears when yes is clicked */}
                    {/* Write Questions Here */}
-           <Health></Health>
+                   { this.state.healthData.map(med =>(
+                   <Health
+                   name={med.name}
+                   address={med.address}
+                   ph= {med.ph}
+                   url= {med.url}
+                   email={med.email}
+                   description={med.description}
+                   id ={med.id}
+                   key={med.id}
+                   removeMed={this.removeMed}></Health>))}
             </Questions> : ""}             
 
           </form>

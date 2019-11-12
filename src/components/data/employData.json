@@ -1,6 +1,7 @@
 
 [
     {
+      "id": 1,
       "name": "Mecklenburg County Reentry Services",
       "address": "801 E 4th St, Charlotte NC 28202",
       "ph": "(980) 314-5053",
@@ -8,7 +9,7 @@
       "email": "n/a",
       "description": "Provides employment coaching, planning and placement, as well as  case management services for recently incarcerated individuals. Also works with local agencies and CPCC in increase educational and vocational skill sets for increased employability and retention. "
     },
-    {
+    {"id": 2,
       "name": "Center for Community Transitions",
       "address": "5825 Old Concord Rd. Charlotte, NC 28213",
       "ph": "(704) 494-0001",
@@ -27,6 +28,7 @@
     },
 
     {
+      "id": 3,
       "name": "Charlotte Area Fund",
       "address": "901 N. Tryon St. Charlotte, NC 28206",
       "ph": "(704) 372-3010",
@@ -41,7 +43,8 @@
       "transportation asist": "yes"
     },
 
-    {
+    { 
+      "id": 4,
       "name": "Exodus Foundation",
       "address": "13016 Eastfield Rd Suite 200-222, Huntersville, NC 28078",
       "ph": "(704) 947-9090",
@@ -58,6 +61,7 @@
     },
 
     {
+      "id": 5,
       "name": "Goodwill Industries Career Developement",
       "address": "5301 Wilkinson Boulevard Charlotte, NC 28208",
       "ph": "(704) 372-3434",
@@ -74,6 +78,7 @@
     },
 
     {
+      "id": 6,
       "name": "Charlotte/NCWorks",
       "address": "11301 Carmel Commons Blvd. Suite 301 Charlotte, NC 28226",
       "ph": "(704) 566-2870",
@@ -83,6 +88,7 @@
     },
 
     {
+      "id": 7,
       "name": "Rescare Workforce Services",
       "address": "5301 Wilkinson Blvd, Charlotte, NC 28208",
       "ph": "(980) 237-2800",
