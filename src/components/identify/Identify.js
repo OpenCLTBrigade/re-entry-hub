@@ -121,6 +121,20 @@ const Indentify = () => (
           </div>
         </div>
       </div>
+    </div>
+    </Col>
+    </Row>
+
+
+
+
+
+    <Row addClasses="row mt-4">
+<Col addClasses="col-12">
+    <h4><p>FAQ's</p></h4>
+
+    <div className="accordion" id="accordionExample">
+
       <div className="card">
         <div className="card-header text-left" id="headingThree">
           <h2 className="mb-0">
@@ -230,9 +244,150 @@ const Indentify = () => (
           </div>
         </div>
       </div>
+
+      <div className="card">
+        <div className="card-header" id="heading6">
+          <h2 className="mb-0">
+            <button
+              className="btn btn-link collapsed text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse6"
+              aria-expanded="false"
+              aria-controls="collapse6"
+            >
+            <h5><p>How can an offender take care of unresolved traffic tickets prior to release? </p> </h5>
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapse6"
+          className="collapse"
+          aria-labelledby="heading6"
+          data-parent="#accordionExample"
+        >
+          <div className="card-body">
+            <ul>
+              <ol>
+              DMV has call centers that provide clearance information to any caller. The numbers are: 919.715.7000 or 919.861.3807. 
+              The caller should be able to state: full name, date of birth, social security number and of course the DL/ID number if applicable. 
+              The caller should request “requirements for driver clearance”. Inmates may also send DMV a written request to: NC Division of Motor 
+              Vehicles/Problem Resolution Unit Driver Assistance Branch MSC 3118, Raleigh NC 27699-3118  
+              </ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-header" id="heading7">
+          <h2 className="mb-0">
+            <button
+              className="btn btn-link collapsed text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse7"
+              aria-expanded="false"
+              aria-controls="collapse7"
+            >
+            <h5><p>Can the driver record clearance process be obtained when an inmate first arrives at the prison facility? </p> </h5>
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapse7"
+          className="collapse"
+          aria-labelledby="heading7"
+          data-parent="#accordionExample"
+        >
+          <div className="card-body">
+            <ul>
+              <ol>
+              Yes, the “requirements for DL/ID clearance” can be obtained at anytime. If a DL/ID record has outstanding citations or 
+              unresolved issues, DMV may generate a screen print reflecting details of each outstanding issue. Upon request from a Department 
+              of Correction management, this information can be faxed to the facility. The inmate may use this document as a checklist to assist in 
+              clearing the DL/ID record.  
+              </ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-header" id="heading8">
+          <h2 className="mb-0">
+            <button
+              className="btn btn-link collapsed text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse8"
+              aria-expanded="false"
+              aria-controls="collapse8"
+            >
+            <h5><p>Can inmates obtain a commercial driver license? </p> </h5>
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapse8"
+          className="collapse"
+          aria-labelledby="heading8"
+          data-parent="#accordionExample"
+        >
+          <div className="card-body">
+            <ul>
+              <ol>
+              Anyone that meets the requirements of a CDL may obtain a CDL. There are several tests that are required: Knowledge test, 
+              vision and road safety signs tests, a Pre-trip test and a skills test on open highway in the class of vehicle in which you desire to 
+              obtain the CDL. The applicant must have the proper vehicle to complete the skills test. The cost of a CDL is: $30 CDL application 
+              fee, $15 per year issuance fee and $3 per year for each endorsement. A commercial learner permit is $15 and a replacement CDL 
+              or learner permit is $10. 
+              </ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-header" id="heading9">
+          <h2 className="mb-0">
+            <button
+              className="btn btn-link collapsed text-left"
+              type="button"
+              data-toggle="collapse"
+              data-target="#collapse9"
+              aria-expanded="false"
+              aria-controls="collapse9"
+            >
+            <h5><p>How can I obtain a renewal of my current driver license if the driver license has expired? </p> </h5>
+            </button>
+          </h2>
+        </div>
+        <div
+          id="collapse9"
+          className="collapse"
+          aria-labelledby="heading9"
+          data-parent="#accordionExample"
+        >
+          <div className="card-body">
+            <ul>
+              <ol>If the driver license has notbeen expired more than one (1) year, the vision test and road safety signs test are required. 
+              If the license hasbeen expired more thanone (1) year, the vision test, road safety signs test is required.
+              </ol>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+
+
     </div>
     </Col>
     </Row>
+
+
+
   </div>
 );
 
