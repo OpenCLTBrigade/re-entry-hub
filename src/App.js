@@ -11,7 +11,7 @@ import Footer from "./components/footer/Footer";
 
 const App = () => (
   <div id="head">
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <div id="one">
       <Switch>
           <Route exact path="/" component={Home} />
