@@ -1,0 +1,15 @@
+.nav-item a{
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+#mainTitle{
+    font-size: 26px;
+    font-weight: 600;
+    color: green;
+}
+
+.navbar{
+    box-shadow: 0px -1px 5px 1px rgba(0, 0, 0, 0.582);
+}

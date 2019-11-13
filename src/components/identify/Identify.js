@@ -19,7 +19,7 @@ const Indentify = () => (
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-                <h5>1.  Proof of Identification and Proof of Residency:</h5>
+                <h6>1.  Proof of Identification and Proof of Residency:</h6>
            
             </button>
           </h2>
@@ -84,7 +84,7 @@ const Indentify = () => (
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-                <h5> 2. Proof of Liability Insurance:</h5>
+                <h6> 2. Proof of Liability Insurance:</h6>
               
             </button>
           </h2>
@@ -131,22 +131,22 @@ const Indentify = () => (
 
     <Row addClasses="row mt-4">
 <Col addClasses="col-12">
-    <h4><p>FAQ's</p></h4>
+    <h4><p><i class="fa fa-question" aria-hidden="true"></i> FAQ's</p></h4>
 
     <div className="accordion" id="accordionExample">
 
       <div className="card">
-        <div className="card-header text-left" id="headingThree">
+        <div className="card-header" id="headingThree">
           <h2 className="mb-0">
             <button
-              className="btn btn-link collapsed"
+              className="btn btn-link collapsed text-left"
               type="button"
               data-toggle="collapse"
               data-target="#collapse3"
               aria-expanded="false"
               aria-controls="collapseThree"
-            ><h5><p>Can an inmate obtain a NC DMV Identification Card prior to the
-            time of release?</p></h5>
+            ><h6><p>Can an inmate obtain a NC DMV Identification Card prior to the
+            time of release?</p></h6>
             </button>
           </h2>
         </div>
@@ -173,15 +173,15 @@ const Indentify = () => (
         <div className="card-header" id="headingThree">
           <h2 className="mb-0">
             <button
-              className="btn btn-link collapsed text-left"
+              className="btn btn-link collapsed text-left m-0 "
               type="button"
               data-toggle="collapse"
               data-target="#collapse4"
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-                <h5><p>Can a NC driver license or ID card be renewed from a North
-              Carolina Correction Facility via mail</p>?</h5>
+                <h6><p> Can a NC license or ID card be renewed from a North
+              Carolina Correction Facility by mail ?</p></h6>
               
             </button>
           </h2>
@@ -215,8 +215,8 @@ const Indentify = () => (
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-            <h5><p>Can duplicate or replacement DL/IDs be mailed to the prison
-              facility?</p> </h5>
+            <h6><p>Can duplicate or replacement DL/IDs be mailed to the prison
+              facility?</p> </h6>
             </button>
           </h2>
         </div>
@@ -256,7 +256,7 @@ const Indentify = () => (
               aria-expanded="false"
               aria-controls="collapse6"
             >
-            <h5><p>How can an offender take care of unresolved traffic tickets prior to release? </p> </h5>
+            <h6><p>How can an offender take care of unresolved traffic tickets prior to release? </p> </h6>
             </button>
           </h2>
         </div>
@@ -290,7 +290,7 @@ const Indentify = () => (
               aria-expanded="false"
               aria-controls="collapse7"
             >
-            <h5><p>Can the driver record clearance process be obtained when an inmate first arrives at the prison facility? </p> </h5>
+            <h6><p>Can the driver record clearance process be obtained when an inmate first arrives at the prison facility? </p> </h6>
             </button>
           </h2>
         </div>
@@ -324,7 +324,7 @@ const Indentify = () => (
               aria-expanded="false"
               aria-controls="collapse8"
             >
-            <h5><p>Can inmates obtain a commercial driver license? </p> </h5>
+            <h6><p>Can inmates obtain a commercial driver license? </p> </h6>
             </button>
           </h2>
         </div>
@@ -359,7 +359,7 @@ const Indentify = () => (
               aria-expanded="false"
               aria-controls="collapse9"
             >
-            <h5><p>How can I obtain a renewal of my current driver license if the driver license has expired? </p> </h5>
+            <h6><p>How can I obtain a renewal of my current driver license if the driver license has expired? </p> </h6>
             </button>
           </h2>
         </div>

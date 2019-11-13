@@ -1,25 +1,27 @@
 import React from "react";
 import NavTabs from "../../nav/NavTabs";
 import { Row, Container, Col } from "../../grid";
+import "./about.css"
 
 
 const About = () => (
   
   <div>
    <NavTabs />
-   <Container addClasses ="container">
-     <Row>
-       <Col addClasses="col-12">
-      <h1>About Page</h1>
-          <p>
-            Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui mauris,
-            ut interdum nunc egestas sed. Aenean sed mollis diam. Nunc aliquet risus ac finibus porta. Nam
-            quis arcu non lectus tincidunt fermentum. Suspendisse aliquet orci porta quam semper
-            imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
-            diam, sit amet facilisis lectus blandit at.
-        </p>
+   <Container addClasses ="container mt-4 p-3">
+     <Row addClasses="row">
+       <Col addClasses="col-12 mt-4 p-3">
+      <h1>Home</h1>
+     
+      </Col>
 
-</Col>
+      <Col addClasses="col-12 mt-4 p-3">
+      <p id="homeDescription">
+        Returning to your community after a period of incarceration can be difficult.
+        Fortunately there are programs that can help. 
+        This site is intended to help you locate resources and assistance in North Carolina.
+        </p>
+      </Col>
 </Row>
 </Container>
 

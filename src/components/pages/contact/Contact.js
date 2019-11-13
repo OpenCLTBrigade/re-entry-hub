@@ -5,8 +5,8 @@ import { Row, Container, Col } from "../../grid";
 const Contact = props => (
   <div>
     <NavTabs />
-    <Container addClasses="container mt-3">
-      <h3 className="text-center">Contact us</h3>
+    <Container addClasses="container mt-4 shadow">
+      <h3 className="text-center p-3">Contact us</h3>
       <br />
       <Row addClasses="row">
         <Col addClasses="col-md-8">

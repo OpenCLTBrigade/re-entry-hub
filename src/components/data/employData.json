@@ -7,7 +7,14 @@
       "ph": "(980) 314-5053",
       "url": "http://charlottereentry.org/",
       "email": "n/a",
-      "description": "Provides employment coaching, planning and placement, as well as  case management services for recently incarcerated individuals. Also works with local agencies and CPCC in increase educational and vocational skill sets for increased employability and retention. "
+      "description": "Provides employment coaching, planning and placement, as well as  case management services for recently incarcerated individuals. Also works with local agencies and CPCC in increase educational and vocational skill sets for increased employability and retention.",
+      "employment readiness": "yes",
+      "employment search/networking":"yes",
+      "training":"no",
+      "types of training": [],
+      "transportation asist": "yes",
+       "brochure": ""
+
     },
     {"id": 2,
       "name": "Center for Community Transitions",
@@ -20,10 +27,9 @@
       "employment search/networking":"yes",
       "training":"no",
       "types of training": [],
-      "transportation asist": "yes",
-       "brochure": "https://centerforcommunitytransitions.org/wp-content/uploads/CCT-LifeWorks-brochure.pdf"
-      
-
+       "brochure": "https://centerforcommunitytransitions.org/wp-content/uploads/CCT-LifeWorks-brochure.pdf",
+       "apprenticeship": "no",
+       "transportation asist": "no"
     
     },
 
@@ -37,9 +43,9 @@
       "description": "Teaches low-income persons self-sufficiency through job training/classes and basic education. They also offer a paid apprenticeship program and offer qualifying students tuition assistance for short-term skills training programs.",
       "employment readiness": "yes",
       "employment search/networking":"yes",
-      "training":"Yes",
+      "training":"yes",
       "types of training": ["HVAC", "Institute of Real Estate Management (IREM)", "Certified Nurse’s Assistant", "Pharmacy Technician", "Customer Service", "Forklift Training", "Medical Technician", "CDL" ,"Heavy Equipment"],
-      "Pre-Apprenticeship training": "yes",
+      "apprenticeship": "yes",
       "transportation asist": "yes"
     },
 
@@ -55,7 +61,7 @@
       "employment search/networking":"yes",
       "training":"no",
       "types of training": [],
-      "Pre-Apprenticeship training": "no",
+      "apprenticeship": "no",
       "transportation asist": "no"
 
     },
@@ -70,9 +76,9 @@
       "description": "Goodwill Offers employment skills training, job search, and placement. They also run a staffing agency.",
       "employment readiness": "yes",
       "employment search/networking":"yes",
-      "training":"Yes",
+      "training":"yes",
       "types of training": ["Contruction","Forklift", "Trade Skills","Customer, Administrative & Business Services","MS Office","Computer"],
-      "Pre-Apprenticeship training": "no",
+      "apprenticeship": "no",
       "transportation asist": "no"
 
     },
@@ -97,9 +103,9 @@
       "description": "Serves people ages 16-24. Provides career planning, training, employment coaching, soft skills and cognitive skills, and job placement, as well as case management services for recently incarcerated individuals. Offers paid work experience and assistance with college entry. Occupational Skill training and transportation are also paid. All services are provided with a personal career advisor. ",
       "employment readiness": "no",
       "employment search/networking":"no",
-      "training":"Yes",
+      "training":"yes",
       "types of training": ["HVAC",  "Certified Nurse’s Assistant", "Pharmacy Technician", "Construction", "Forklift Training", "Dental assistant", "CDL"],
-      "Pre-Apprenticeship training": "yes",
+      "apprenticeship": "yes",
       "transportation asist": "yes"
 
     },
@@ -113,9 +119,9 @@
       "description": "The Urban League provides adult continuing education and training servicesdesigned to help participants achieve a livable wage. They also host job fairs regularly.",
       "employment readiness": "yes",
       "employment search/networking":"Yes",
-      "training":"Yes",
+      "training":"yes",
       "types of training": ["HVAC","Microsoft Office", "Medical Code","Duke CAST","Highway Construction and Trades"],
-      "Pre-Apprenticeship training": "no",
+      "apprenticeship": "no",
       "transportation asist": "no"
 
     }

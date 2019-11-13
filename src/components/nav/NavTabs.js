@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import "./NavTabs.scss"
+import "./NavTabs.css"
 
 const NavTabs = () => (
   <nav className="navbar navbar-light bg-light navbar-expand-md">
@@ -13,7 +13,7 @@ const NavTabs = () => (
           : "nav-link navbar-brand pl-0"
       }
     >
-      Re-entry Roadmap
+     <span id="mainTitle">Re-entry Roadmap</span> 
     </Link>
     {/* Ternary turns off menu links on home page */}
     {  window.location.pathname !== "/" ? (
@@ -35,10 +35,10 @@ const NavTabs = () => (
       <ul className="navbar-nav ml-auto">
         <li className="nav-item">
           <Link
-            to="/"
+            to="/about"
             className={
               
-              window.location.pathname === "/" ? "nav-link active" : "nav-link"
+              window.location.pathname === "/about" ? "nav-link active" : "nav-link"
             }
           >
             Home
@@ -58,7 +58,7 @@ const NavTabs = () => (
           </Link>
         </li>
 
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             to="/about"
             className={
@@ -69,9 +69,9 @@ const NavTabs = () => (
           >
             About
           </Link>
-        </li>
+        </li> */}
 
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <Link
             to="/logon"
             className={
@@ -82,7 +82,7 @@ const NavTabs = () => (
           >
             Logon
           </Link>
-        </li>
+        </li> */}
         
 
         <li className="nav-item">

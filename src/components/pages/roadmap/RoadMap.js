@@ -2,7 +2,7 @@ import React from "react";
 import NavTabs from "../../nav/NavTabs";
 import Questions from "../../questions/Questions";
 import { Row, Container, Col } from "../../grid";
-import { optionsState, optionsCounty, startState } from "../../data/data";
+import {startState, optionsCounty1 } from "../../data/data";
 import Select from "react-select";
 import { RadioGroup, Radio } from "react-radio-group";
 import Employ from "../../employment/Employ";
@@ -14,8 +14,9 @@ import employData from "../../data/employData.json";
 import housingData from "../../data/housingData.json";
 import healthData from "../../data/healthData.json";
 import foodData from "../../data/foodData.json"
-var jsonQuery = require('json-query');
-
+import "./roadmap.css"
+// var jsonQuery = require('json-query');
+let test;
 class RoadMap extends React.Component {
   state = {
     selectedState: "",
@@ -34,29 +35,35 @@ class RoadMap extends React.Component {
       console.log(value);
       this.setState({
         [name]: value
-      });
-  
-      
+      }); 
     });
     console.log(this.state);
   };
-
+   
   handleChangeState = event => {
     console.log(event);
-
     event == null
       ? this.setState({ selectedState: {} })
       : this.setState({ selectedState: event });
+    //  this.setState({ selectedState: event });
     console.log(`State selected:`, this.state.selectedState);
   };
 
   handleChangeCounty = event => {
     event == null
       ? this.setState({ selectedCounty: {} })
-      : this.setState({ selectedCounty: event });
+      : this.setState({ employData: event.employData } );
+         this.setState({ housingData: event.housingData });
+         this.setState({ healthData: event.healthData });
+         this.setState({ foodData: event.foodData })
+  
+
+      console.log(`event:`, event);
     console.log(`County selected:`, this.state.selectedCounty);
   };
 
+
+  //radio button click handler====================================
   handleChange = event => {
     console.log(event);
     const { name, value } = event;
@@ -64,11 +71,7 @@ class RoadMap extends React.Component {
       [name]: value
     });
 
-  var result=  jsonQuery('NC[value=49].label', {
-      data: optionsCounty
-    })
-    // console.log(this.state);
-    console.log(result);
+    console.log(this.state);
   };
 
   // employment section=======================================
@@ -85,6 +88,24 @@ class RoadMap extends React.Component {
     this.setState({ employData });
   };
 
+  training = (event) => {
+    event.preventDefault();
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const employData = this.state.employData.filter(item => item.training !== 'no');
+    // Set this.state.employData equal to the new array
+    this.setState({ employData });
+  };
+
+ apprenticeship = (event) => {
+    event.preventDefault();
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const employData = this.state.employData.filter(item => item.apprenticeship !== 'no');
+    // Set this.state.employData equal to the new array
+    this.setState({ employData });
+  };
+
+
+
 //housing section============================================
   removeHousing = (id) => {
     // Filter this.state.employData. for items with an id not equal to the id being removed
@@ -98,6 +119,23 @@ class RoadMap extends React.Component {
     event.preventDefault();
     this.setState({ housingData });
   };
+
+  womenOnly = (event) => {
+    event.preventDefault();
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const housingData = this.state.housingData.filter(item => item.womenOnly == 'Yes');
+    // Set this.state.employData equal to the new array
+    this.setState({ housingData });
+  };
+
+ menOnly = (event) => {
+    event.preventDefault();
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const housingData = this.state.housingData.filter(item => item.menOnly == 'Yes');
+    // Set this.state.employData equal to the new array
+    this.setState({ housingData });
+  };
+
 
 //health section=============================================
   removeMed = (id) => {
@@ -127,23 +165,42 @@ class RoadMap extends React.Component {
     this.setState({ foodData });
   };
 
+  walkins = (event) => {
+    event.preventDefault();
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const foodData = this.state.foodData.filter(item => item.apptReq !== 'Yes');
+    // Set this.state.employData equal to the new array
+    this.setState({ foodData });
+  };
+
+ noID = (event) => {
+    event.preventDefault();
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const foodData = this.state.foodData.filter(item => item.idReq == 'No');
+    // Set this.state.employData equal to the new array
+    this.setState({ foodData });
+  };
+
+
+
 
   render() {
-    const { value } = this.state.selectedState;
+    // const { value } = this.state.selectedState;
     // console.log(value)
     return (
       <div>
      <NavTabs />
-        <Container  addClasses= "container">
-          <h1 className="text-center mt-3">RoadMap</h1>
+        <Container  addClasses= "container shadow mt-4 mt-3 p-2">
+          <h1 className="text-center mt-4 mb-3" >RoadMap</h1>
           <form className="mt-4 pb-4">
             <Row addClasses="row">
-              <Col addClasses="col-12 offset-1 mt-4">
-                <p>Select Your State and County.</p>
+              <Col addClasses="col-11 offset-1 mb-2">
+                <h3>Start Here <i class="fa fa-arrow-down" aria-hidden="true"></i></h3>
               </Col>
 
-              <Col addClasses="col-xs-6 col-sm-4  offset-1">
-                {/* State Selector */}
+   {/* State Selector */}
+              {/* <Col addClasses="col-xs-6 col-sm-4  offset-1">
+             
                 <Select
                   className="shadow-sm mt-0"
                   isSearchable={true}
@@ -153,17 +210,17 @@ class RoadMap extends React.Component {
                   options={optionsState}
                   placeholder="Select Your State"
                 />
-              </Col>
+              </Col> */}
 
-              <Col addClasses="col-xs-6 col-sm-4">
+              <Col addClasses="col-xs-6 col-sm-4  offset-1">
                 {/* County Selector */}
                 <Select
                   className="shadow-sm mt-0"
-                  isDisabled={!value ? true : false} // If State has been selected, enable county selector.
+                  // isDisabled={!value ? true : false} // If State has been selected, enable county selector.
                   isSearchable={true}
                   isClearable={true}
                   onChange={this.handleChangeCounty}
-                  options={optionsCounty[value]}
+                  options={optionsCounty1}
                   placeholder="Select Your County"
                 />
               </Col>
@@ -171,7 +228,7 @@ class RoadMap extends React.Component {
 
             {/* Question 1 ============================================*/}
             <Row>
-              <Col addClasses="col-10 offset-1 mt-3">
+              <Col addClasses="col-10 offset-1 mt-3 mb-0 question">
                 <RadioGroup name="id"  onChange={this.handleChange}>
                   <p>Do you need an Id?</p>
                   <label>
@@ -200,7 +257,7 @@ class RoadMap extends React.Component {
   
 {/* Question 2 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1">
+              <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="housing" onChange={this.handleChange}>
                   <p>Do you need housing?</p>
                   <label>
@@ -223,9 +280,10 @@ class RoadMap extends React.Component {
 
             {this.state.housing === true ? <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
             <h4>Agencies That Can Help You in Your Housing Search</h4>{" "}
-            <button className="btn btn-primary btn-sm mb-2" onClick={this.resetHousing}>
-            Reset 
-          </button>
+            <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetHousing}>Clear</button>
+            <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.menOnly}>Men Only</button>
+            <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.womenOnly}>Women Only</button>
+
 
                    {/*Add'l questions appears when yes is clicked */}
                    {/* Write Questions Here */}
@@ -243,7 +301,7 @@ class RoadMap extends React.Component {
 
  {/* Question 3 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1">
+              <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="employment" onChange={this.handleChange}>
                   <p>Do you need employment?</p>
                   <label>
@@ -267,9 +325,9 @@ class RoadMap extends React.Component {
             {this.state.employment === true ? <Questions dataTarget="#collapseThree"  idName="collapseThree">
       
             <h3>Agencies That Can Help You in Your Job Search</h3>{" "}
-            <button className="btn btn-primary mb-2" onClick={this.reset}>
-            Reset
-          </button>
+            <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.reset}>Clear</button>
+            <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.training}>Training</button>
+            <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.apprenticeship}>Apprenticeship</button>
 
 
                    {/*Add'l questions appears when yes is clicked */}
@@ -290,7 +348,7 @@ class RoadMap extends React.Component {
 
             {/* Question 4 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1">
+              <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="transport" onChange={this.handleChange}>
                   <p>Do you need help with transportation?</p>
                   <label>
@@ -322,7 +380,7 @@ class RoadMap extends React.Component {
 
             {/* Question 5============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1">
+              <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="food" onChange={this.handleChange}>
                   <p>Do you need help with food security?</p>
                   <label>
@@ -345,10 +403,9 @@ class RoadMap extends React.Component {
 
             {this.state.food === true ? <Questions dataTarget="#collapseFive"  idName="collapseFive">
             <h3>Agencies That Can Help You with Food</h3>{" "}
-             <button className="btn btn-primary mb-2" onClick={this.resetFood}>
-              Reset
-             </button>
-
+             <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetFood}>Clear</button>
+             <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.walkins}>No Appointments</button>
+             <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.noID}>No ID</button>
                   
                    {/*Add'l questions appears when yes is clicked */}
                      {/* Write Questions Here */}
@@ -366,7 +423,7 @@ class RoadMap extends React.Component {
 
             {/* Question 6 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1">
+              <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="health" onChange={this.handleChange}>
                   <p>
                     Do you have health concerns (physical, mental or substance
@@ -393,7 +450,7 @@ class RoadMap extends React.Component {
             {this.state.health === true ? <Questions dataTarget="#collapseSix"  idName="collapseSix">
             <h3>Agencies That Can Help You with Mental Health & Medical</h3>{" "}
             <button className="btn btn-primary mb-2" onClick={this.resetMed}>
-            Reset
+           Clear
           </button>
 
                    {/*Add'l questions appears when yes is clicked */}

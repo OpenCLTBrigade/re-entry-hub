@@ -116,8 +116,8 @@
       "felonies": "Yes",
       "fees": "Yes",
       "rent": "Yes",
-      "menOnly": "No",
-      "womenOnly": "Yes",
+      "menOnly": "Yes",
+      "womenOnly": "No",
       "families": "No",
       "employmentReq":"No"
 

@@ -30,7 +30,7 @@ const Housing = props => (
           <p className="m-0">
             <strong>Description:</strong> {props.description}
           </p>
-          <span>
+          {/* <span>
             <strong>Registry:</strong> {props.registry}{" "}
           </span>
           <span>
@@ -44,10 +44,10 @@ const Housing = props => (
           </span>
           <span>
             <strong>Men Only:</strong> {props.menOnly}
-          </span>
+          </span> */}
              {/* Removes info if x is clicked */}
           <span onClick={() => props.removeHousing(props.id)} className="remove">
-            <i class="fa fa-trash-o" aria-hidden="true"></i>
+            <i className="fa fa-trash-o" aria-hidden="true"></i>
           </span>
 
         </Col>

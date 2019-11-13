@@ -6,9 +6,9 @@ import { Row, Col } from "../grid";
 //idName example: collaspseFive.
 const Questions = ({ dataTarget, idName, children }) => (
   <Row>
-    <Col addClasses="col-11 offset-1 mb-3">
+    <Col addClasses="col-10 offset-1 mb-3">
       <div className="accordion" id="accordex">
-        <div className="card">
+        <div className="card border">
           <div className="card-header" id="headingOne">
             <h2 className="mb-0">
               <button
@@ -19,7 +19,7 @@ const Questions = ({ dataTarget, idName, children }) => (
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-                Collapsible Group Item
+               Click here <i class="fa fa-arrow-down" aria-hidden="true"></i>
               </button>
             </h2>
           </div>
@@ -29,7 +29,7 @@ const Questions = ({ dataTarget, idName, children }) => (
             aria-labelledby="headingOne"
             data-parent="#accordex"
           >
-            <div className="card-body">
+            <div className="card-body border">
             
               {children}
             </div>
