@@ -1,3 +1,12 @@
 #homeDescription{
-    font-size: 20px;
+    font-size: 26px;
+}
+
+.homePicture{
+    background-image: url("../../images/welcome.png");
+        background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 60%;
+    height: 250%;
 }

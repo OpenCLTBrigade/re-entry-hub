@@ -29,7 +29,8 @@ body {
   bottom: 20%;
   font-weight: 400;
   font-size: 2rem;
-  text-shadow: 1px 1px 15px rgba(177, 170, 170, 0.719);
-  box-shadow: inset 0px 0px 5px 1px rgb(62, 114, 77),2px 2px 15px 5px rgb(0, 0, 0);
+  text-shadow: 1px 1px 5px rgba(5, 5, 5, 0.897);
+  box-shadow: 2px 2px 15px 5px rgb(0, 0, 0);
   border-radius: 10px;
+  opacity: 0.85;
 }

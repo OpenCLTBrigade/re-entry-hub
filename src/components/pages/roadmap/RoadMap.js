@@ -15,8 +15,6 @@ import housingData from "../../data/housingData.json";
 import healthData from "../../data/healthData.json";
 import foodData from "../../data/foodData.json"
 import "./roadmap.css"
-// var jsonQuery = require('json-query');
-let test;
 class RoadMap extends React.Component {
   state = {
     selectedState: "",
