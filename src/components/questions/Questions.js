@@ -19,7 +19,7 @@ const Questions = ({ dataTarget, idName, children }) => (
                 aria-expanded="true"
                 aria-controls="collapseOne"
               >
-               Click here <i class="fa fa-arrow-down" aria-hidden="true"></i>
+               Click here to get started! <i class="fa fa-arrow-down" aria-hidden="true"></i>
               </button>
             </h2>
           </div>

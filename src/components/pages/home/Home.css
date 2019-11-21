@@ -13,7 +13,7 @@ body {
   }
 /* Home background image */
   #home{
-    background-image: url("../../images/welcome.png");
+    background-image: url("../../images/charllotte_nc_skyline.jpg");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat image */
     background-size: cover; /* Resize image to cover container */
@@ -21,11 +21,15 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgba(235, 233, 226, 0);
+    opacity: 0.85;
 }
  
 #homebtn{
   position: absolute;
   bottom: 20%;
   font-weight: 400;
-  font-size: 2rem
+  font-size: 2rem;
+  text-shadow: 1px 1px 15px rgba(177, 170, 170, 0.719);
+  box-shadow: inset 0px 0px 5px 1px rgb(62, 114, 77),2px 2px 15px 5px rgb(0, 0, 0);
+  border-radius: 10px;
 }

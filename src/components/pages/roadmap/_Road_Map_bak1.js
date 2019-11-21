@@ -245,32 +245,21 @@ class RoadMap extends React.Component {
                     />
                     No
                   </label>
-                          {(() => {
-                              switch (this.state.id) {
-                                // If have ID Card, Section is done.  Mark Complete.
-                                case true: return <span className="done"> "Done!" <i className="fa fa-check-square-o" aria-hidden="true"></i></span>;
-                                default:      return "";
-                              }
-                            })()}
                 </RadioGroup>
               </Col>
             </Row>
-          {/*ID Card info and FAQs section  */}
-          {(() => {
-              switch (this.state.id) {
-                // If no ID Card, Open instructions and FAQs
-                case false:   return <Questions dataTarget="#collapseOne"  idName="collapseOne"><Identify/></Questions>
-                default:      return "";
-              }
-            })()}
 
-            
+            {this.state.id === false ? <Questions dataTarget="#collapseOne"  idName="collapseOne">
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+           <Identify></Identify>
+            </Questions> :''}
   
 {/* Question 2 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="housing" onChange={this.handleChange}>
-                  <p>Have you made housing arrangements?</p>
+                  <p>Do you need housing?</p>
                   <label>
                     <Radio
                       className="mr-1"
@@ -285,53 +274,36 @@ class RoadMap extends React.Component {
                     />
                     No
                   </label>
-                  {(() => {
-                              switch (this.state.housing) {
-                                // If have housing, Section is done.  Mark Complete.
-                                case true: return <span className="done"> "Done!" <i className="fa fa-check-square-o" aria-hidden="true"></i></span>;
-                                default:      return "";
-                              }
-                            })()}
-
                 </RadioGroup>
               </Col>
             </Row>
 
-                      {/*Housing section  */}
-          {(() => {
-              switch (this.state.housing) {
-                // If no ID Card, Open instructions and FAQs
-                case false:   return <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
-                <h4>Agencies That Can Help You in Your Housing Search</h4>{" "}
-                <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetHousing}>Clear</button>
-                <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.menOnly}>Men Only</button>
-                <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.womenOnly}>Women Only</button>
-    
-    
-                       {/*Add'l questions appears when yes is clicked */}
-                       {/* Write Questions Here */}
-                    { this.state.housingData.map(home =>(<Housing
-                      name={home.name}
-                      address={home.address}
-                      ph= {home.ph}
-                      url= {home.url}
-                      email={home.email}
-                      description={home.description} 
-                      id ={home.id}
-                      key={home.id}
-                      removeHousing={this.removeHousing}></Housing>))}
-                </Questions>
-                default:      return "";
-              }
-            })()}
+            {this.state.housing === true ? <Questions dataTarget="#collapseTwo"  idName="collapseTwo">
+            <h4>Agencies That Can Help You in Your Housing Search</h4>{" "}
+            <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetHousing}>Clear</button>
+            <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.menOnly}>Men Only</button>
+            <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.womenOnly}>Women Only</button>
 
 
+                   {/*Add'l questions appears when yes is clicked */}
+                   {/* Write Questions Here */}
+                { this.state.housingData.map(home =>(<Housing
+                  name={home.name}
+                  address={home.address}
+                  ph= {home.ph}
+                  url= {home.url}
+                  email={home.email}
+                  description={home.description} 
+                  id ={home.id}
+                  key={home.id}
+                  removeHousing={this.removeHousing}></Housing>))}
+            </Questions> : ""}             
 
  {/* Question 3 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="employment" onChange={this.handleChange}>
-                  <p>Do you have employment?</p>
+                  <p>Do you need employment?</p>
                   <label>
                     <Radio
                       className="mr-1"
@@ -346,46 +318,34 @@ class RoadMap extends React.Component {
                     />
                     No
                   </label>
-                  {(() => {
-                switch (this.state.employment) {
-                // If have Employment, Section is done.  Mark Complete.
-                case true: return <span className="done"> "Done!" <i className="fa fa-check-square-o" aria-hidden="true"></i></span>;
-                default:      return "";
-                }
-            })()}
                 </RadioGroup>
               </Col>
             </Row>
 
-                      {/*Housing section  */}
-                      {(() => {
-              switch (this.state.employment) {
-                // If no Housing, open section
-                case false:   return <Questions dataTarget="#collapseThree"  idName="collapseThree">
+            {this.state.employment === true ? <Questions dataTarget="#collapseThree"  idName="collapseThree">
       
-                <h3>Agencies That Can Help You in Your Job Search</h3>{" "}
-                <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.reset}>Clear</button>
-                <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.training}>Training</button>
-                <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.apprenticeship}>Apprenticeship</button>
-    
-    
-                       {/*Add'l questions appears when yes is clicked */}
-                         {/* Write Questions Here */}
-             { this.state.employData.map(agency =>(<Employ
-                    id ={agency.id}
-                    key={agency.id}
-                    name={agency.name}
-                    address={agency.address}
-                    ph= {agency.ph}
-                    url= {agency.url}
-                    email={agency.email}
-                    description={agency.description}
-                    remove={this.remove}
-                    ></Employ>))}
-                </Questions>
-                default:      return "";
-              }
-            })()}
+            <h3>Agencies That Can Help You in Your Job Search</h3>{" "}
+            <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.reset}>Clear</button>
+            <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.training}>Training</button>
+            <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.apprenticeship}>Apprenticeship</button>
+
+
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+         { this.state.employData.map(agency =>(<Employ
+                id ={agency.id}
+                key={agency.id}
+                name={agency.name}
+                address={agency.address}
+                ph= {agency.ph}
+                url= {agency.url}
+                email={agency.email}
+                description={agency.description}
+                remove={this.remove}
+
+                ></Employ>))}
+            </Questions> : ""}             
+
             {/* Question 4 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1 question">
@@ -405,31 +365,18 @@ class RoadMap extends React.Component {
                     />
                     No
                   </label>
-                        {(() => {
-                          switch (this.state.transport) {
-                          // If have transportation, Section is done.  Mark Complete.
-                          case false: return <span className="done"> "Done!" <i className="fa fa-check-square-o" aria-hidden="true"></i></span>;
-                          default:      return "";
-                        }
-                    })()}
                 </RadioGroup>
               </Col>
             </Row>
-                      {/*Transportation section  */}
-            {(() => {
-              switch (this.state.transport) {
-                // If no transportation, open section
-                case true:   return <Questions dataTarget="#collapseFour"  idName="collapseFour">
-                {/*Add'l questions appears when yes is clicked */}
-                  {/* Write Questions Here */}
-                    1.	Question 1<br/>
-                    2.	Question 2<br/>         
-                    3.	Question 3<br/>
-                    4.  Question 4
-                    </Questions>          
-                default: return "";
-              }
-            })()}
+            
+            {this.state.transport === true ? <Questions dataTarget="#collapseFour"  idName="collapseFour">
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+            1.	Question 1<br/>
+            2.	Question 2<br/>         
+            3.	Question 3<br/>
+            4.  Question 4
+            </Questions> : ""}             
 
             {/* Question 5============================================*/}
             <Row>
@@ -450,41 +397,29 @@ class RoadMap extends React.Component {
                     />
                     No
                   </label>
-                  {(() => {
-                    switch (this.state.food) {
-                    // If no food security problem, Section is done.  Mark Complete.
-                    case false: return <span className="done"> "Done!" <i className="fa fa-check-square-o" aria-hidden="true"></i></span>;
-                    default:      return "";
-                }
-            })()}
                 </RadioGroup>
               </Col>
             </Row>
-                      {/*Food section  */}
-          {(() => {
-              switch (this.state.food) {
-                // If food security issue, open section
-                case true:   return <Questions dataTarget="#collapseFive"  idName="collapseFive">
-                <h3>Agencies That Can Help You with Food</h3>{" "}
-                 <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetFood}>Clear</button>
-                 <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.walkins}>No Appointments</button>
-                 <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.noID}>No ID</button>                    
-                       {/*Add'l questions appears when yes is clicked */}
-                         {/* Write Questions Here */}
-                         { this.state.foodData.map(item =>(<Food
-                      name={item.name}
-                      address={item.address}
-                      ph= {item.ph}
-                      url= {item.url}
-                      email={item.email}
-                      description={item.description} 
-                      id ={item.id}
-                      key={item.id}
-                      removeFood={this.removeFood}></Food>))}
-                </Questions>         
-                default:  return "";
-              }
-            })()}
+
+            {this.state.food === true ? <Questions dataTarget="#collapseFive"  idName="collapseFive">
+            <h3>Agencies That Can Help You with Food</h3>{" "}
+             <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetFood}>Clear</button>
+             <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.walkins}>No Appointments</button>
+             <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.noID}>No ID</button>
+                  
+                   {/*Add'l questions appears when yes is clicked */}
+                     {/* Write Questions Here */}
+                     { this.state.foodData.map(item =>(<Food
+                  name={item.name}
+                  address={item.address}
+                  ph= {item.ph}
+                  url= {item.url}
+                  email={item.email}
+                  description={item.description} 
+                  id ={item.id}
+                  key={item.id}
+                  removeFood={this.removeFood}></Food>))}
+            </Questions> : ""}             
 
             {/* Question 6 ============================================*/}
             <Row>
@@ -508,15 +443,6 @@ class RoadMap extends React.Component {
                     />
                     No
                   </label>
-            {(() => {
-                switch (this.state.health) {
-                // If no health problem, Section is done.  Mark Complete.
-                case false: return <span className="done"> "Done!" <i className="fa fa-check-square-o" aria-hidden="true"></i></span>;
-                default:      return "";
-                }
-            })()}
-
-
                 </RadioGroup>
               </Col>
             </Row>

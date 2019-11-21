@@ -1,0 +1,28 @@
+h6 p, .btn-link{
+    padding: 0px;
+}
+
+.collapse> .card-body> p{
+    padding: 0px 10px 0px 10px;
+ 
+}
+
+.btn-link{
+    text-shadow: 1px 1px 3px rgba(77, 76, 76, 0.418);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none !important;
+}
+
+.btn-link:hover{
+ 
+  color: rgb(29, 109, 62);
+}
+
+.btn-link> h6{
+    font-size: 18px;
+}
+
+.card>.card-header:hover{
+    background-color: rgba(235, 235, 235, 0.719);
+}

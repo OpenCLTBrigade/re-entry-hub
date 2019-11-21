@@ -1100,17 +1100,17 @@ housingData: [
 
 
 export const startState = [
-  { value: false, name: "housing" },
-  { value: false, name: "employment" },
-  { value: false, name: "transport" },
-  { value: false, name: "food" },
-  { value: false, name: "health" },
-  { value: false, name: "business" },
-  { value: false, name: "finance" },
-  { value: false, name: "mentor" },
-  { value: false, name: "provider" },
-  { value: false, name: "resident" },
-  { value: false, name: "id" }
+  { value: "closed", name: "housing" },
+  { value: "closed", name: "employment" },
+  { value: "closed", name: "transport" },
+  { value: "closed", name: "food" },
+  { value: "closed", name: "health" },
+  { value: "closed", name: "business" },
+  { value: "closed", name: "finance" },
+  { value: "closed", name: "mentor" },
+  { value: "closed", name: "provider" },
+  { value: "closed", name: "resident" },
+  { value: 'closed',  name: "id" }
 ];
 
 
