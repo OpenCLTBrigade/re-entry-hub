@@ -9,7 +9,7 @@ import Employ from "../../employment/Employ";
 import Housing from "../../housing/Housing";
 import Health from "../../health/Health";
 import Food from "../../food/Food"
-import Identify from "../../identify/Identify"
+import IdCard from "../../idCard/IdCard"
 import employData from "../../data/employData.json";
 import housingData from "../../data/housingData.json";
 import healthData from "../../data/healthData.json";
@@ -121,7 +121,7 @@ class RoadMap extends React.Component {
   womenOnly = (event) => {
     event.preventDefault();
     // Filter this.state.employData. for items with an id not equal to the id being removed
-    const housingData = this.state.housingData.filter(item => item.womenOnly == 'Yes');
+    const housingData = this.state.housingData.filter(item => item.womenOnly ==='Yes');
     // Set this.state.employData equal to the new array
     this.setState({ housingData });
   };
@@ -129,7 +129,7 @@ class RoadMap extends React.Component {
  menOnly = (event) => {
     event.preventDefault();
     // Filter this.state.employData. for items with an id not equal to the id being removed
-    const housingData = this.state.housingData.filter(item => item.menOnly == 'Yes');
+    const housingData = this.state.housingData.filter(item => item.menOnly ==='Yes');
     // Set this.state.employData equal to the new array
     this.setState({ housingData });
   };
@@ -174,13 +174,10 @@ class RoadMap extends React.Component {
  noID = (event) => {
     event.preventDefault();
     // Filter this.state.employData. for items with an id not equal to the id being removed
-    const foodData = this.state.foodData.filter(item => item.idReq == 'No');
+    const foodData = this.state.foodData.filter(item => item.idReq === 'No');
     // Set this.state.employData equal to the new array
     this.setState({ foodData });
   };
-
-
-
 
   render() {
     // const { value } = this.state.selectedState;
@@ -224,7 +221,7 @@ class RoadMap extends React.Component {
               </Col>
             </Row>
 
-            {/* Question 1 ============================================*/}
+{/* Question 1 ============================================*/}
             <Row>
               <Col addClasses="col-10 offset-1 mt-3 mb-0 question">
                 <RadioGroup name="id"  onChange={this.handleChange}>
@@ -257,7 +254,7 @@ class RoadMap extends React.Component {
           {(() => {
               switch (this.state.id) {
                 // If no ID Card, Open instructions and FAQs
-                case false:   return <Questions dataTarget="#collapseOne"  idName="collapseOne"><Identify/></Questions>
+                case false:   return <Questions dataTarget="#collapseOne"  idName="collapseOne"><IdCard/></Questions>
                 default:      return "";
               }
             })()}
@@ -304,8 +301,7 @@ class RoadMap extends React.Component {
                 <button className="btn btn-primary btn-sm mb-2 mr-1" onClick={this.resetHousing}>Clear</button>
                 <button className="btn btn-success btn-sm mb-2 mr-1" onClick={this.menOnly}>Men Only</button>
                 <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.womenOnly}>Women Only</button>
-    
-    
+        
                        {/*Add'l questions appears when yes is clicked */}
                        {/* Write Questions Here */}
                     { this.state.housingData.map(home =>(<Housing
@@ -384,7 +380,9 @@ class RoadMap extends React.Component {
                 default:      return "";
               }
             })()}
-            {/* Question 4 ============================================*/}
+
+
+{/* Question 4 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="transport" onChange={this.handleChange}>
@@ -429,7 +427,8 @@ class RoadMap extends React.Component {
               }
             })()}
 
-            {/* Question 5============================================*/}
+
+{/* Question 5============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="food" onChange={this.handleChange}>
@@ -484,7 +483,8 @@ class RoadMap extends React.Component {
               }
             })()}
 
-            {/* Question 6 ============================================*/}
+
+{/* Question 6 ============================================*/}
             <Row>
               <Col addClasses="col-12 offset-1 question">
                 <RadioGroup name="health" onChange={this.handleChange}>

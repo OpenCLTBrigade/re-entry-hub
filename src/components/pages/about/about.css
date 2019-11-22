@@ -4,7 +4,7 @@
 
 .homePicture{
     background-image: url("../../images/welcome.png");
-        background-position: center; 
+    background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
     width: 60%;

@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col } from "../grid";
-import "./identify.css"
+import "./idCard.css"
 
 const Indentify = () => (
   <div>
