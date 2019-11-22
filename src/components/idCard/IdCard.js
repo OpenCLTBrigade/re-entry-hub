@@ -24,9 +24,9 @@ const Indentify = () => (
           <p>Here's the requirements for getting and ID.</p>
         </h4>
 
-        <div className="accordion" id="accordion">
+        <div className="accordion shadow-sm shadow-sm" id="accordion">
           <div className="card">
-            <div className="card-header" id="headingOne">
+            <div className="card-header shadow-sm" id="headingOne">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link"
@@ -93,7 +93,7 @@ const Indentify = () => (
             </div>
           </div>
           <div className="card">
-            <div className="card-header" id="headingTwo">
+            <div className="card-header shadow-sm" id="headingTwo">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed"
@@ -151,9 +151,9 @@ const Indentify = () => (
           </p>
         </h4>
 
-        <div className="accordion" id="accordionExample">
+        <div className="accordion shadow-sm" id="accordionExample">
           <div className="card">
-            <div className="card-header" id="headingThree">
+            <div className="card-header shadow-sm" id="headingThree">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left"
@@ -192,7 +192,7 @@ const Indentify = () => (
           </div>
 
           <div className="card">
-            <div className="card-header" id="headingThree">
+            <div className="card-header shadow-sm" id="headingThree">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left m-0 "
@@ -228,7 +228,7 @@ const Indentify = () => (
           </div>
 
           <div className="card">
-            <div className="card-header" id="headingThree">
+            <div className="card-header shadow-sm" id="headingThree">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left"
@@ -271,7 +271,7 @@ const Indentify = () => (
           </div>
 
           <div className="card">
-            <div className="card-header" id="heading6">
+            <div className="card-header shadow-sm" id="heading6">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left"
@@ -312,7 +312,7 @@ const Indentify = () => (
           </div>
 
           <div className="card">
-            <div className="card-header" id="heading7">
+            <div className="card-header shadow-sm" id="heading7">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left"
@@ -352,7 +352,7 @@ const Indentify = () => (
           </div>
 
           <div className="card">
-            <div className="card-header" id="heading8">
+            <div className="card-header shadow-sm" id="heading8">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left"
@@ -391,7 +391,7 @@ const Indentify = () => (
           </div>
 
           <div className="card">
-            <div className="card-header" id="heading9">
+            <div className="card-header shadow-sm" id="heading9">
               <h2 className="mb-0">
                 <button
                   className="btn btn-link collapsed text-left"

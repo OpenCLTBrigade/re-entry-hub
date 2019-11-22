@@ -190,7 +190,7 @@ class RoadMap extends React.Component {
           <form className="mt-4 pb-4">
             <Row addClasses="row">
               <Col addClasses="col-11 offset-1 mb-2">
-                <h3 id="start">Start Here <i class="fa fa-arrow-down" aria-hidden="true"></i></h3>
+                <h3 id="start">Let's Get Started! <i class="fa fa-arrow-down" aria-hidden="true"></i></h3>
               </Col>
 
    {/* State Selector */}
@@ -223,7 +223,7 @@ class RoadMap extends React.Component {
 
 {/* Question 1 ============================================*/}
             <Row>
-              <Col addClasses="col-10 offset-1 mt-3 mb-0 question">
+              <Col addClasses="col-10 offset-1 mt-3 mb-0 question border shadow-sm">
                 <RadioGroup name="id"  onChange={this.handleChange}>
                   <p>Do you have your Id?</p>
                   <label>
@@ -263,7 +263,7 @@ class RoadMap extends React.Component {
   
 {/* Question 2 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1 question">
+              <Col addClasses="col-10 offset-1 question border mt-1 shadow-sm">
                 <RadioGroup name="housing" onChange={this.handleChange}>
                   <p>Have you made housing arrangements?</p>
                   <label>
@@ -323,7 +323,7 @@ class RoadMap extends React.Component {
 
  {/* Question 3 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1 question">
+              <Col addClasses="col-10 offset-1 question border mt-1 shadow-sm">
                 <RadioGroup name="employment" onChange={this.handleChange}>
                   <p>Do you have employment?</p>
                   <label>
@@ -384,7 +384,7 @@ class RoadMap extends React.Component {
 
 {/* Question 4 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1 question">
+              <Col addClasses="col-10 offset-1 question border mt-1 shadow-sm">
                 <RadioGroup name="transport" onChange={this.handleChange}>
                   <p>Do you need help with transportation?</p>
                   <label>
@@ -430,7 +430,7 @@ class RoadMap extends React.Component {
 
 {/* Question 5============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1 question">
+              <Col addClasses="col-10 offset-1 question border mt-1 shadow-sm">
                 <RadioGroup name="food" onChange={this.handleChange}>
                   <p>Do you need help with food security?</p>
                   <label>
@@ -486,7 +486,7 @@ class RoadMap extends React.Component {
 
 {/* Question 6 ============================================*/}
             <Row>
-              <Col addClasses="col-12 offset-1 question">
+              <Col addClasses="col-10 offset-1 question border mt-1 md-4 shadow-sm">
                 <RadioGroup name="health" onChange={this.handleChange}>
                   <p>
                     Do you have health concerns (physical, mental or substance
