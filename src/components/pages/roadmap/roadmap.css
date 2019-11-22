@@ -4,9 +4,11 @@
 
 .question p{
     margin-bottom: 0;
-   
 }
 
+.question:hover {
+    background-color: rgba(235, 235, 235, 0.5)!important;
+}
 
 #roadmap, #start{
     text-shadow: 2px 2px 5px rgba(83, 82, 82, 0.445);

@@ -23,6 +23,7 @@ h6 p, .btn-link{
     font-size: 18px;
 }
 
-.card>.card-header:hover{
+.card>.card-header:hover {
     background-color: rgba(235, 235, 235, 0.719);
 }
+

@@ -9,7 +9,7 @@ const Indentify = () => (
         <h4>
           <p>Why do I need an ID?</p>
         </h4>
-        <p>The following activities require and ID card:</p>
+        <p><h5>The following activities require and ID card:</h5></p>
         <ol>
           <li>Applying for job or unemployment</li>
           <li>Applying for food stamps/welfare</li>
