@@ -207,7 +207,7 @@ class RoadMap extends React.Component {
                 />
               </Col> */}
 
-              <Col addClasses="col-4 offset-1">
+              <Col addClasses="col-5 offset-1">
                 {/* County Selector */}
                 <Select
                   className="shadow-sm mt-0"

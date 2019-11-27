@@ -3,7 +3,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./components/pages/home/Home";
 import About from "./components/pages/about/About";
-import Logon from "./components/pages/logon/Logon";
 import Contact from "./components/pages/contact/Contact";
 import RoadMap from "./components/pages/roadmap/RoadMap";
 // import NotFound from "./components/pages/notFound/NotFound";
@@ -16,7 +15,6 @@ const App = () => (
       <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/logon" component={Logon} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/roadmap" component={RoadMap} />
 {/* Default changed from Notfound to Home due to compatibility issue with gh-pages.  
