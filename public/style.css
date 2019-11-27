@@ -1,6 +1,14 @@
 html{
     font-family: 'Roboto', sans-serif;
-}
+    box-sizing: border-box;
+    max-width: 1200px !important;
+    font-size: 1.6vw;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
 
 #head{
     min-height: 100vh; /* will cover the 100% of viewport */

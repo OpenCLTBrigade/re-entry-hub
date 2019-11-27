@@ -1,5 +1,5 @@
 .question{
-    font-size: 19px;
+    font-size: 1.1875rem;
 }
 
 .question p{
@@ -16,7 +16,7 @@
 
 h2 .btn-link{
     text-shadow: 1px 1px 3px rgba(102, 101, 101, 0.473);
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .done{

@@ -1,5 +1,5 @@
 #homeDescription{
-    font-size: 26px;
+    font-size: 1.625rem;
 }
 
 .homePicture{
@@ -7,6 +7,6 @@
     background-position: center; 
     background-repeat: no-repeat;
     background-size: cover;
-    width: 65%;
-    height: 280%;
+    width: 35.5rem;
+    height: 25rem;
 }
