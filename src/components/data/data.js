@@ -625,7 +625,7 @@ housingData: [
             "CDL",
             "Heavy Equipment"
           ],
-          "Pre-Apprenticeship training": "yes",
+          "apprenticeship": "yes",
           "transportation asist": "yes"
         },
 
@@ -642,7 +642,7 @@ housingData: [
           "employment search/networking": "yes",
           training: "no",
           "types of training": [],
-          "Pre-Apprenticeship training": "no",
+          "apprenticeship": "no",
           "transportation asist": "no"
         },
 
@@ -666,7 +666,7 @@ housingData: [
             "MS Office",
             "Computer"
           ],
-          "Pre-Apprenticeship training": "no",
+          "apprenticeship": "no",
           "transportation asist": "no"
         },
 
@@ -702,7 +702,7 @@ housingData: [
             "Dental assistant",
             "CDL"
           ],
-          "Pre-Apprenticeship training": "yes",
+          "apprenticeship": "yes",
           "transportation asist": "yes"
         },
 
@@ -724,7 +724,7 @@ housingData: [
             "Duke CAST",
             "Highway Construction and Trades"
           ],
-          "Pre-Apprenticeship training": "no",
+          "apprenticeship": "no",
           "transportation asist": "no"
         }
       ],

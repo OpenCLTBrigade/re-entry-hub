@@ -10,17 +10,19 @@ import Housing from "../../housing/Housing";
 import Health from "../../health/Health";
 import Food from "../../food/Food"
 import IdCard from "../../idCard/IdCard"
-import "./roadmap.css";
-
- let   employData;
- let   housingData;
- let   healthData;
- let   foodData;
- let   data; 
+import employData from "../../data/employData.json";
+import housingData from "../../data/housingData.json";
+import healthData from "../../data/healthData.json";
+import foodData from "../../data/foodData.json"
+import "./roadmap.css"
 class RoadMap extends React.Component {
   state = {
     selectedState: "",
     selectedCounty: "",
+    employData,
+    housingData,
+    healthData,
+    foodData 
   };
 
   componentDidMount = () => {
@@ -46,16 +48,12 @@ class RoadMap extends React.Component {
   };
 
   handleChangeCounty = event => {
-
-    event = null
-      ? this.setState({ selectedCounty: {} }) 
-      : (
-        data = event,
-        employData = event.employData,
-        housingData = event.housingData,
-        healthData = event.healthData,
-        foodData = event.foodData
-        );
+    event == null
+      ? this.setState({ selectedCounty: {} })
+      : this.setState({ employData: event.employData } );
+         this.setState({ housingData: event.housingData });
+         this.setState({ healthData: event.healthData });
+         this.setState({ foodData: event.foodData })
   
 
       console.log(`event:`, event);
@@ -76,32 +74,31 @@ class RoadMap extends React.Component {
 
   // employment section=======================================
   remove = (id) => {
-    // Filter employData. for items with an id not equal to the id being removed
-    employData = employData.filter(item => item.id !== id);
-    // Set employData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const employData = this.state.employData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
     this.setState({ employData });
   };
 
   reset = (event) => {
     // reset employData state to original
     event.preventDefault();
-    employData = data.employData;
     this.setState({ employData });
   };
 
   training = (event) => {
     event.preventDefault();
-    // Filter employData. for items with an id not equal to the id being removed
-    employData = employData.filter(item => item.training !== 'no');
-    // Set employData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const employData = this.state.employData.filter(item => item.training !== 'no');
+    // Set this.state.employData equal to the new array
     this.setState({ employData });
   };
 
  apprenticeship = (event) => {
     event.preventDefault();
-    // Filter employData. for items with an id not equal to the id being removed
-    employData = employData.filter(item => item.apprenticeship !== 'no');
-    // Set employData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const employData = this.state.employData.filter(item => item.apprenticeship !== 'no');
+    // Set this.state.employData equal to the new array
     this.setState({ employData });
   };
 
@@ -109,83 +106,82 @@ class RoadMap extends React.Component {
 
 //housing section============================================
   removeHousing = (id) => {
-    // Filter housingData. for items with an id not equal to the id being removed
-    housingData = housingData.filter(item => item.id !== id);
-    // Set housingData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const housingData = this.state.housingData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
     this.setState({ housingData });
   };
 
   resetHousing = (event) => {
-    // reset housingData state to original
+    // reset employData state to original
     event.preventDefault();
-    housingData = data.housingData;
     this.setState({ housingData });
   };
 
   womenOnly = (event) => {
     event.preventDefault();
-    // Filter housingData. for items with an id not equal to the id being removed
-    housingData = housingData.filter(item => item.womenOnly ==='Yes');
-    // Set housingData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const housingData = this.state.housingData.filter(item => item.womenOnly ==='Yes');
+    // Set this.state.employData equal to the new array
     this.setState({ housingData });
   };
 
  menOnly = (event) => {
     event.preventDefault();
-    // Filter housingData. for items with an id not equal to the id being removed
-    housingData = housingData.filter(item => item.menOnly ==='Yes');
-    // Set housingData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const housingData = this.state.housingData.filter(item => item.menOnly ==='Yes');
+    // Set this.state.employData equal to the new array
     this.setState({ housingData });
   };
 
 
 //health section=============================================
   removeMed = (id) => {
-    // Filter healthData. for items with an id not equal to the id being removed
-    healthData = healthData.filter(item => item.id !== id);
-    // Set healthData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const healthData = this.state.healthData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
     this.setState({ healthData });
   };
 
   resetMed = (event) => {
-    // reset healthData state to original
+    // reset employData state to original
     event.preventDefault();
-    healthData = data.healthData;
     this.setState({ healthData });
   };
 
 //Food section=============================================
   removeFood = (id) => {
-    // Filter foodData. for items with an id not equal to the id being removed
-    foodData = foodData.filter(item => item.id !== id);
-    // Set foodData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const foodData = this.state.foodData.filter(item => item.id !== id);
+    // Set this.state.employData equal to the new array
     this.setState({ foodData });
   };
 
   resetFood = (event) => {
-    // reset foodData state to original
+    // reset employData state to original
     event.preventDefault();
-    foodData = data.foodData;
     this.setState({ foodData });
   };
 
   walkins = (event) => {
     event.preventDefault();
-    // Filter foodData. for items with an id not equal to the id being removed
-    foodData = foodData.filter(item => item.apptReq !== 'Yes');
-    // Set foodData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const foodData = this.state.foodData.filter(item => item.apptReq !== 'Yes');
+    // Set this.state.employData equal to the new array
     this.setState({ foodData });
   };
 
  noID = (event) => {
     event.preventDefault();
-    // Filter foodData. for items with an id not equal to the id being removed
-    foodData = foodData.filter(item => item.idReq === 'No');
-    // Set foodData equal to the new array
+    // Filter this.state.employData. for items with an id not equal to the id being removed
+    const foodData = this.state.foodData.filter(item => item.idReq === 'No');
+    // Set this.state.employData equal to the new array
     this.setState({ foodData });
   };
 
   render() {
+    // const { value } = this.state.selectedState;
+    // console.log(value)
     return (
       <div>
      <NavTabs />
@@ -308,7 +304,7 @@ class RoadMap extends React.Component {
         
                        {/*Add'l questions appears when yes is clicked */}
                        {/* Write Questions Here */}
-                    { housingData.map(home =>(<Housing
+                    { this.state.housingData.map(home =>(<Housing
                       name={home.name}
                       address={home.address}
                       ph= {home.ph}
@@ -369,7 +365,7 @@ class RoadMap extends React.Component {
     
                        {/*Add'l questions appears when yes is clicked */}
                          {/* Write Questions Here */}
-             {employData.map(agency =>(<Employ
+             { this.state.employData.map(agency =>(<Employ
                     id ={agency.id}
                     key={agency.id}
                     name={agency.name}
@@ -472,7 +468,7 @@ class RoadMap extends React.Component {
                  <button className="btn btn-info      btn-sm mb-2 mr-1" onClick={this.noID}>No ID</button>                    
                        {/*Add'l questions appears when yes is clicked */}
                          {/* Write Questions Here */}
-                         { foodData.map(item =>(<Food
+                         { this.state.foodData.map(item =>(<Food
                       name={item.name}
                       address={item.address}
                       ph= {item.ph}
@@ -531,7 +527,7 @@ class RoadMap extends React.Component {
 
                    {/*Add'l questions appears when yes is clicked */}
                    {/* Write Questions Here */}
-                   { healthData.map(med =>(
+                   { this.state.healthData.map(med =>(
                    <Health
                    name={med.name}
                    address={med.address}
