@@ -10,7 +10,7 @@
     "jquery": "^3.4.1",
     "json-query": "^2.2.2",
     "jsonata": "^1.7.0",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "popper": "^1.0.1",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
