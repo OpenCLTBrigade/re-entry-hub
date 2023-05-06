@@ -7,7 +7,7 @@
     "babel": "^6.23.0",
     "bootstrap": "^4.3.1",
     "gh-pages": "^2.1.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "json-query": "^2.2.2",
     "jsonata": "^1.7.0",
     "node-sass": "^4.13.0",
